@@ -129,8 +129,8 @@ def test_save_and_load(tmp_path):
 def test_load_template_csv():
     path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "words.csv")
     words, warnings = vocab.load_words(path)
-    assert len(words) == 10
-    assert warnings == []
+    assert len(words) >= 300   # база слов Goethe A2 + твои слова
+    assert warnings == []      # в файле нет ошибок и дубликатов
 
 
 def test_semicolon_csv_and_article_in_german_column(tmp_path):

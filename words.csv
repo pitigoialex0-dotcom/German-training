@@ -1,11 +1,313 @@
-german,article,plural,russian,english,lektion,example
-Hotel,das,die Hotels,гостиница/отель,hotel,13,Das Hotel ist neben der Bank.
-Bank,die,die Banken,банк,bank,13,Die Bank ist an der Ecke links.
-Straße,die,die Straßen,улица,street,13,Gehen Sie die Straße geradeaus.
-gehen,,,идти/ходить,to go,13,Ich gehe nach Hause.
-Wohnung,die,die Wohnungen,квартира,apartment,14,Meine Wohnung hat drei Zimmer.
-Brötchen,das,die Brötchen,булочка,bread roll,14,Zum Frühstück esse ich ein Brötchen.
-Arzt,der,die Ärzte,врач,doctor,15,Der Arzt sagt: Sie müssen im Bett bleiben.
-Kopf,der,die Köpfe,голова,head,15,Mein Kopf tut weh.
-Rock,der,die Röcke,юбка,skirt,16,Der Rock ist zu kurz.
-schön,,,красивый,beautiful,16,Das Wetter ist heute sehr schön.
+german,article,plural,perfekt,russian,english,thema,lektion,example
+Vorname,der,die Vornamen,,имя,first name,Person und Familie,,Wie ist Ihr Vorname?
+Familienname,der,die Familiennamen,,фамилия,surname,Person und Familie,,Bitte schreiben Sie hier Ihren Familiennamen.
+heißen,,,hat geheißen,зваться/называться,to be called,Person und Familie,,Wie heißen Sie? – Ich heiße Olga Petrova.
+Alter,das,,,возраст,age,Person und Familie,,Im Formular fehlt noch Ihr Alter.
+verheiratet,,,,женат/замужем,married,Person und Familie,,Ich bin seit fünf Jahren verheiratet.
+Familienstand,der,,,семейное положение,marital status,Person und Familie,,Bitte geben Sie auch Ihren Familienstand an.
+kommen,,,ist gekommen,приходить/приезжать/быть родом,to come,Person und Familie,,Woher kommen Sie? – Ich komme aus Russland.
+Eltern,die,die Eltern,,родители,parents,Person und Familie,,Meine Eltern leben in Sankt Petersburg.
+Vater,der,die Väter,,отец/папа,father,Person und Familie,,Mein Vater arbeitet als Ingenieur.
+sich vorstellen,,,hat sich vorgestellt,представляться,to introduce oneself,Person und Familie,,Darf ich mich kurz vorstellen?
+Mutter,die,die Mütter,,мать/мама,mother,Person und Familie,,Meine Mutter ist 60 Jahre alt.
+ledig,,,,холост/не замужем,single,Person und Familie,,Mein Bruder ist 30 und noch ledig.
+Geschwister,die,die Geschwister,,братья и сёстры,siblings,Person und Familie,,"Hast du Geschwister? – Ja, einen Bruder."
+kennenlernen,,,hat kennengelernt,знакомиться/познакомиться,to get to know,Person und Familie,,Ich habe meine Frau im Deutschkurs kennengelernt.
+Bruder,der,die Brüder,,брат,brother,Person und Familie,,Mein Bruder ist zwei Jahre älter als ich.
+Schwester,die,die Schwestern,,сестра,sister,Person und Familie,,Meine Schwester studiert in Berlin.
+heiraten,,,hat geheiratet,жениться/выйти замуж,to marry,Person und Familie,,Mein Bruder hat letztes Jahr geheiratet.
+Sohn,der,die Söhne,,сын,son,Person und Familie,,Unser Sohn geht schon in die Schule.
+geschieden,,,,разведён/разведена,divorced,Person und Familie,,Meine Eltern sind seit zehn Jahren geschieden.
+Tochter,die,die Töchter,,дочь,daughter,Person und Familie,,Meine Tochter ist fünf Jahre alt.
+buchstabieren,,,hat buchstabiert,произносить по буквам,to spell,Person und Familie,,Können Sie Ihren Namen bitte buchstabieren?
+Kind,das,die Kinder,,ребёнок,child,Person und Familie,,"Haben Sie Kinder? – Ja, zwei."
+Wohnung,die,die Wohnungen,,квартира,flat,Wohnen,14,Wir suchen eine Wohnung mit drei Zimmern.
+Haus,das,die Häuser,,дом,house,Wohnen,,Meine Eltern haben ein Haus mit Garten.
+wohnen,,,hat gewohnt,жить/проживать,to live,Wohnen,,Ich wohne seit zwei Jahren in Hamburg.
+Zimmer,das,die Zimmer,,комната,room,Wohnen,,Die Wohnung hat zwei Zimmer und einen Balkon.
+hell,,,,светлый,bright,Wohnen,,Das Wohnzimmer ist groß und hell.
+Küche,die,die Küchen,,кухня,kitchen,Wohnen,,"Die Küche ist klein, aber modern."
+umziehen,,,ist umgezogen,переезжать,to move (house),Wohnen,,Wir sind im Mai nach Köln umgezogen.
+Bad,das,die Bäder,,ванная,bathroom,Wohnen,,Das Bad hat eine Dusche und ein Fenster.
+Balkon,der,die Balkone,,балкон,balcony,Wohnen,,Im Sommer sitzen wir oft auf dem Balkon.
+einziehen,,,ist eingezogen,въезжать/заселяться,to move in,Wohnen,,Wir ziehen am 1. Juni in die neue Wohnung ein.
+Miete,die,die Mieten,,арендная плата/квартплата,rent,Wohnen,,Wie hoch ist die Miete für die Wohnung?
+ruhig,,,,тихий/спокойный,quiet,Wohnen,,Die Wohnung liegt in einer ruhigen Straße.
+Nebenkosten,die,die Nebenkosten,,коммунальные платежи,utility costs,Wohnen,,Die Miete ist 500 Euro plus 120 Euro Nebenkosten.
+mieten,,,hat gemietet,снимать/арендовать,to rent,Wohnen,,Wir möchten eine Wohnung im Zentrum mieten.
+Nachbar,der,die Nachbarn,,сосед,neighbour,Wohnen,,Unser Nachbar ist sehr nett und hilft uns oft.
+Vermieter,der,die Vermieter,,арендодатель/хозяин квартиры,landlord,Wohnen,,Die Heizung ist kaputt. Ich rufe den Vermieter an.
+aufräumen,,,hat aufgeräumt,убирать/наводить порядок,to tidy up,Wohnen,,Am Samstag räume ich mein Zimmer auf.
+Möbel,die,die Möbel,,мебель,furniture,Wohnen,,Wir brauchen neue Möbel für das Wohnzimmer.
+gemütlich,,,,уютный,cosy,Wohnen,,"Unser Wohnzimmer ist klein, aber gemütlich."
+Schrank,der,die Schränke,,шкаф,cupboard / wardrobe,Wohnen,,Der große Schrank steht im Schlafzimmer.
+putzen,,,hat geputzt,убирать/чистить/мыть,to clean,Wohnen,,Ich putze jeden Freitag das Bad.
+Aufzug,der,die Aufzüge,,лифт,lift,Wohnen,,"Die Wohnung ist im 4. Stock, aber es gibt einen Aufzug."
+Mittagessen,das,die Mittagessen,,обед,lunch,Essen und Trinken,,Was gibt es heute zum Mittagessen?
+Brötchen,das,die Brötchen,,булочка,bread roll,Essen und Trinken,14,Zum Frühstück esse ich ein Brötchen mit Käse.
+frühstücken,,,hat gefrühstückt,завтракать,to have breakfast,Essen und Trinken,,Am Sonntag frühstücken wir immer zusammen.
+Fleisch,das,,,мясо,meat,Essen und Trinken,,"Ich esse kein Fleisch, nur Fisch."
+lecker,,,,вкусный,tasty,Essen und Trinken,,Der Kuchen ist wirklich lecker!
+Gemüse,das,,,овощи,vegetables,Essen und Trinken,,Ich esse jeden Tag viel Gemüse.
+kochen,,,hat gekocht,готовить/варить,to cook,Essen und Trinken,,Heute koche ich Suppe für die ganze Familie.
+Obst,das,,,фрукты,fruit,Essen und Trinken,,Zum Nachtisch gibt es frisches Obst.
+Kartoffel,die,die Kartoffeln,,картофель/картошка,potato,Essen und Trinken,,Möchtest du Reis oder Kartoffeln?
+essen,,,hat gegessen,есть/кушать,to eat,Essen und Trinken,,Was hast du heute Mittag gegessen?
+Ei,das,die Eier,,яйцо,egg,Essen und Trinken,,Zum Frühstück esse ich gern ein Ei.
+satt,,,,сытый,full (not hungry),Essen und Trinken,,"Danke, ich bin schon satt."
+Milch,die,,,молоко,milk,Essen und Trinken,,Trinkst du deinen Kaffee mit Milch?
+trinken,,,hat getrunken,пить,to drink,Essen und Trinken,,Morgens trinke ich immer einen Kaffee.
+Getränk,das,die Getränke,,напиток,drink,Essen und Trinken,,"Möchten Sie ein Getränk? – Ja, ein Wasser bitte."
+Speisekarte,die,die Speisekarten,,меню,menu,Essen und Trinken,,Können wir bitte die Speisekarte haben?
+bestellen,,,hat bestellt,заказывать,to order,Essen und Trinken,,Haben Sie schon bestellt?
+Rechnung,die,die Rechnungen,,счёт,bill,Essen und Trinken,,"Entschuldigung, die Rechnung bitte!"
+süß,,,,сладкий,sweet,Essen und Trinken,,Der Tee ist mir zu süß.
+Kellner,der,die Kellner,,официант,waiter,Essen und Trinken,,Der Kellner bringt uns die Suppe.
+schmecken,,,hat geschmeckt,быть вкусным/нравиться на вкус,to taste,Essen und Trinken,,Wie schmeckt die Suppe? – Sehr gut!
+Hunger,der,,,голод,hunger,Essen und Trinken,,Ich habe großen Hunger. Wann essen wir?
+Geschäft,das,die Geschäfte,,магазин,shop,Einkaufen und Kleidung,,Das Geschäft ist sonntags geschlossen.
+Supermarkt,der,die Supermärkte,,супермаркет,supermarket,Einkaufen und Kleidung,,Ich gehe schnell in den Supermarkt.
+einkaufen,,,hat eingekauft,делать покупки/закупаться,to go shopping,Einkaufen und Kleidung,,Ich kaufe meistens am Samstag ein.
+Preis,der,die Preise,,цена,price,Einkaufen und Kleidung,,Der Preis ist mir leider zu hoch.
+billig,,,,дешёвый,cheap,Einkaufen und Kleidung,,Die Schuhe waren im Angebot und sehr billig.
+Angebot,das,die Angebote,,предложение/акция,(special) offer,Einkaufen und Kleidung,,Die Jacken sind diese Woche im Angebot.
+bezahlen,,,hat bezahlt,платить/оплачивать,to pay,Einkaufen und Kleidung,,Kann ich mit Karte bezahlen?
+Kasse,die,die Kassen,,касса,checkout,Einkaufen und Kleidung,,Bitte bezahlen Sie an der Kasse.
+Kleidung,die,,,одежда,clothes,Einkaufen und Kleidung,,Wo finde ich Kleidung für Kinder?
+kosten,,,hat gekostet,стоить,to cost,Einkaufen und Kleidung,,Was kostet die Jacke?
+Hose,die,die Hosen,,брюки/штаны,trousers,Einkaufen und Kleidung,,Die Hose ist mir zu lang.
+teuer,,,,дорогой,expensive,Einkaufen und Kleidung,,"Die Jacke ist schön, aber zu teuer."
+Hemd,das,die Hemden,,рубашка,shirt,Einkaufen und Kleidung,,Ich brauche ein weißes Hemd für die Arbeit.
+anprobieren,,,hat anprobiert,примерять,to try on,Einkaufen und Kleidung,,Kann ich das Kleid mal anprobieren?
+Kleid,das,die Kleider,,платье,dress,Einkaufen und Kleidung,,Das rote Kleid gefällt mir sehr.
+Jacke,die,die Jacken,,куртка/пиджак,jacket,Einkaufen und Kleidung,,Im Winter brauche ich eine warme Jacke.
+passen,,,hat gepasst,подходить/быть впору,to fit,Einkaufen und Kleidung,,Die Schuhe passen mir nicht. Sie sind zu klein.
+Schuh,der,die Schuhe,,ботинок/туфля,shoe,Einkaufen und Kleidung,,Ich suche neue Schuhe für den Sommer.
+bequem,,,,удобный,comfortable,Einkaufen und Kleidung,,Ich trage gern bequeme Kleidung.
+Größe,die,die Größen,,размер,size,Einkaufen und Kleidung,,Haben Sie die Hose auch in Größe 40?
+umtauschen,,,hat umgetauscht,обменивать,to exchange,Einkaufen und Kleidung,,Kann ich die Hose umtauschen? Sie ist zu groß.
+Farbe,die,die Farben,,цвет,colour,Einkaufen und Kleidung,,Gibt es das Hemd auch in einer anderen Farbe?
+Rock,der,die Röcke,,юбка,skirt,Einkaufen und Kleidung,16,Der Rock ist zu kurz.
+Uhr,die,die Uhren,,часы/час (о времени),clock / o'clock,Alltag und Zeit,,Der Kurs beginnt um 9 Uhr.
+Stunde,die,die Stunden,,час,hour,Alltag und Zeit,,Ich arbeite acht Stunden am Tag.
+aufstehen,,,ist aufgestanden,вставать,to get up,Alltag und Zeit,,Ich stehe jeden Tag um sechs Uhr auf.
+Minute,die,die Minuten,,минута,minute,Alltag und Zeit,,"Warte bitte, ich bin in zehn Minuten fertig."
+pünktlich,,,,пунктуальный/вовремя,on time,Alltag und Zeit,,Bitte sei morgen pünktlich!
+Viertel,das,die Viertel,,четверть,quarter,Alltag und Zeit,,Es ist Viertel nach drei.
+duschen,,,hat geduscht,принимать душ,to shower,Alltag und Zeit,,Zuerst dusche ich und dann frühstücke ich.
+Morgen,der,die Morgen,,утро,morning,Alltag und Zeit,,Am Morgen habe ich wenig Zeit.
+Vormittag,der,die Vormittage,,первая половина дня/утро,late morning,Alltag und Zeit,,Am Vormittag gehe ich zum Deutschkurs.
+anfangen,,,hat angefangen,начинать/начинаться,to begin,Alltag und Zeit,,Mein Deutschkurs fängt um 18 Uhr an.
+Nachmittag,der,die Nachmittage,,вторая половина дня/после обеда,afternoon,Alltag und Zeit,,Hast du am Nachmittag Zeit?
+spät,,,,поздно/поздний,late,Alltag und Zeit,,Gestern bin ich sehr spät ins Bett gegangen.
+Abend,der,die Abende,,вечер,evening,Alltag und Zeit,,Am Abend bin ich oft sehr müde.
+dauern,,,hat gedauert,длиться,to last,Alltag und Zeit,,Der Termin dauert ungefähr eine Stunde.
+Montag,der,die Montage,,понедельник,Monday,Alltag und Zeit,,Der Deutschkurs ist jeden Montag und Mittwoch.
+Woche,die,die Wochen,,неделя,week,Alltag und Zeit,,Ich habe diese Woche viel zu tun.
+sich beeilen,,,hat sich beeilt,торопиться/спешить,to hurry,Alltag und Zeit,,Ich muss mich beeilen. Der Kurs beginnt gleich.
+Wochenende,das,die Wochenenden,,выходные,weekend,Alltag und Zeit,,Was machst du am Wochenende?
+morgens,,,,по утрам/утром,in the morning,Alltag und Zeit,,Morgens lese ich gern die Zeitung.
+Termin,der,die Termine,,встреча/запись/приём (у врача),appointment,Alltag und Zeit,,Ich habe morgen um 10 Uhr einen Termin.
+vereinbaren,,,hat vereinbart,договариваться/назначать,to arrange,Alltag und Zeit,,Ich möchte gern einen Termin vereinbaren.
+Datum,das,die Daten,,дата/число,date,Alltag und Zeit,,Welches Datum haben wir heute?
+Hobby,das,die Hobbys,,хобби/увлечение,hobby,Freizeit und Hobbys,,Was ist dein Hobby? – Ich fotografiere gern.
+Freizeit,die,,,свободное время/досуг,free time,Freizeit und Hobbys,,In meiner Freizeit lese ich gern Bücher.
+spielen,,,hat gespielt,играть,to play,Freizeit und Hobbys,,"Spielst du ein Instrument? – Ja, Gitarre."
+Sport,der,,,спорт,sport,Freizeit und Hobbys,,Ich mache zweimal pro Woche Sport.
+gern,,,,охотно/с удовольствием,gladly/like to,Freizeit und Hobbys,,Ich lese gern Krimis.
+Fußball,der,die Fußbälle,,футбол/футбольный мяч,football/soccer,Freizeit und Hobbys,,Am Samstag spiele ich mit Freunden Fußball.
+schwimmen,,,ist geschwommen,плавать,to swim,Freizeit und Hobbys,,Gestern bin ich im See geschwommen.
+Kino,das,die Kinos,,кино/кинотеатр,cinema,Freizeit und Hobbys,,Gehen wir heute Abend ins Kino?
+Film,der,die Filme,,фильм,film/movie,Freizeit und Hobbys,,Der Film beginnt um 20 Uhr.
+tanzen,,,hat getanzt,танцевать,to dance,Freizeit und Hobbys,,Am Samstag haben wir die ganze Nacht getanzt.
+Musik,die,,,музыка,music,Freizeit und Hobbys,,Welche Musik hörst du gern?
+langweilig,,,,скучный/скучно,boring,Freizeit und Hobbys,,Der Film war leider sehr langweilig.
+Konzert,das,die Konzerte,,концерт,concert,Freizeit und Hobbys,,Kommst du am Freitag mit ins Konzert?
+sich treffen,,,hat sich getroffen,встречаться,to meet,Freizeit und Hobbys,,Wir treffen uns um sieben vor dem Kino.
+Verein,der,die Vereine,,клуб/секция/объединение,club/association,Freizeit und Hobbys,,Mein Sohn spielt Tennis in einem Verein.
+Spiel,das,die Spiele,,игра/матч,game/match,Freizeit und Hobbys,,Das Spiel beginnt um acht Uhr.
+wandern,,,ist gewandert,ходить в поход/гулять пешком,to hike,Freizeit und Hobbys,,Am Wochenende wandern wir in den Bergen.
+Ausflug,der,die Ausflüge,,экскурсия/загородная поездка,trip/excursion,Freizeit und Hobbys,,Am Sonntag machen wir einen Ausflug an den See.
+spannend,,,,захватывающий/увлекательный,exciting,Freizeit und Hobbys,,Das Buch ist wirklich spannend.
+Schwimmbad,das,die Schwimmbäder,,бассейн,swimming pool,Freizeit und Hobbys,,Im Sommer gehe ich oft ins Schwimmbad.
+sich interessieren,,,hat sich interessiert,интересоваться,to be interested (in),Freizeit und Hobbys,,Ich interessiere mich sehr für Musik.
+Spaziergang,der,die Spaziergänge,,прогулка,walk,Freizeit und Hobbys,,Nach dem Essen machen wir einen Spaziergang.
+Kopf,der,die Köpfe,,голова,head,Körper und Gesundheit,15,Mein Kopf tut sehr weh.
+Bauch,der,die Bäuche,,живот,belly/stomach,Körper und Gesundheit,,Nach dem Essen tut mir der Bauch weh.
+wehtun,,,hat wehgetan,болеть (о части тела),to hurt,Körper und Gesundheit,,Mein Hals tut seit gestern weh.
+Rücken,der,die Rücken,,спина,back,Körper und Gesundheit,,Ich habe Schmerzen im Rücken.
+krank,,,,больной/болен,ill/sick,Körper und Gesundheit,,Ich bin krank und kann heute nicht arbeiten.
+Bein,das,die Beine,,нога,leg,Körper und Gesundheit,,Er hat sich das Bein gebrochen.
+sich fühlen,,,hat sich gefühlt,чувствовать себя,to feel,Körper und Gesundheit,,Wie fühlen Sie sich heute?
+Zahn,der,die Zähne,,зуб,tooth,Körper und Gesundheit,,Ich putze mir zweimal am Tag die Zähne.
+Arzt,der,die Ärzte,,врач,doctor,Körper und Gesundheit,15,"Du bist krank, geh doch zum Arzt!"
+sich ausruhen,,,hat sich ausgeruht,отдыхать,to rest,Körper und Gesundheit,,Sie müssen sich ein paar Tage ausruhen.
+Apotheke,die,die Apotheken,,аптека,pharmacy,Körper und Gesundheit,,Die Tabletten bekommst du in der Apotheke.
+gesund,,,,здоровый/полезный,healthy,Körper und Gesundheit,,Ich bin wieder gesund und gehe morgen arbeiten.
+Medikament,das,die Medikamente,,лекарство/медикамент,medicine,Körper und Gesundheit,,Nehmen Sie das Medikament dreimal täglich.
+untersuchen,,,hat untersucht,осматривать/обследовать,to examine,Körper und Gesundheit,,Die Ärztin untersucht den Patienten.
+Schmerz,der,die Schmerzen,,боль,pain,Körper und Gesundheit,,Wo haben Sie Schmerzen?
+Fieber,das,,,температура/жар,fever,Körper und Gesundheit,,Das Kind hat hohes Fieber.
+einnehmen,,,hat eingenommen,принимать (лекарство),to take (medicine),Körper und Gesundheit,,Bitte nehmen Sie die Tabletten nach dem Essen ein.
+Erkältung,die,die Erkältungen,,простуда,cold,Körper und Gesundheit,,Ich habe eine Erkältung und bleibe zu Hause.
+müde,,,,усталый/уставший,tired,Körper und Gesundheit,,Ich bin immer müde und schlafe schlecht.
+Krankenhaus,das,die Krankenhäuser,,больница,hospital,Körper und Gesundheit,,Nach dem Unfall musste er ins Krankenhaus.
+sich verletzen,,,hat sich verletzt,пораниться/травмироваться,to injure oneself,Körper und Gesundheit,,Beim Fußball hat er sich am Knie verletzt.
+Gesundheit,die,,,здоровье,health,Körper und Gesundheit,,Sport ist gut für die Gesundheit.
+Beruf,der,die Berufe,,профессия,profession/job,Arbeit und Beruf,,Was sind Sie von Beruf?
+Arbeit,die,die Arbeiten,,работа,work/job,Arbeit und Beruf,,Ich fahre mit dem Bus zur Arbeit.
+arbeiten,,,hat gearbeitet,работать,to work,Arbeit und Beruf,,Ich arbeite von Montag bis Freitag.
+Firma,die,die Firmen,,фирма/компания,company,Arbeit und Beruf,,Sie arbeitet bei einer großen Firma.
+arbeitslos,,,,безработный,unemployed,Arbeit und Beruf,,Er ist seit drei Monaten arbeitslos.
+Kollege,der,die Kollegen,,коллега,colleague,Arbeit und Beruf,,Meine Kollegen sind sehr nett.
+sich bewerben,,,hat sich beworben,подавать заявление (на работу)/откликаться на вакансию,to apply,Arbeit und Beruf,,Ich bewerbe mich um eine Stelle als Kellner.
+Chef,der,die Chefs,,начальник/шеф,boss,Arbeit und Beruf,,Ich muss zuerst meinen Chef fragen.
+Büro,das,die Büros,,офис/бюро,office,Arbeit und Beruf,,Herr Weber ist heute nicht im Büro.
+verdienen,,,hat verdient,зарабатывать,to earn,Arbeit und Beruf,,In diesem Job verdient man gut.
+Stelle,die,die Stellen,,место работы/должность/вакансия,position/job,Arbeit und Beruf,,Ich suche eine neue Stelle als Verkäuferin.
+berufstätig,,,,работающий,employed/working,Arbeit und Beruf,,Meine Frau und ich sind beide berufstätig.
+Bewerbung,die,die Bewerbungen,,заявление о приёме на работу/отклик на вакансию,application,Arbeit und Beruf,,Ich schicke meine Bewerbung per E-Mail.
+aufhören,,,hat aufgehört,заканчивать/прекращать,to stop/finish,Arbeit und Beruf,,Freitags höre ich schon um 14 Uhr auf.
+Lebenslauf,der,die Lebensläufe,,резюме/биография,CV/résumé,Arbeit und Beruf,,Bitte schicken Sie uns Ihren Lebenslauf.
+Arbeitszeit,die,die Arbeitszeiten,,рабочее время/часы работы,working hours,Arbeit und Beruf,,Meine Arbeitszeit ist von 9 bis 17 Uhr.
+werden,,,ist geworden,становиться/стать,to become,Arbeit und Beruf,,Meine Tochter möchte später Lehrerin werden.
+Praktikum,das,die Praktika,,практика/стажировка,internship,Arbeit und Beruf,,Im Sommer mache ich ein Praktikum in einem Hotel.
+selbstständig,,,,самостоятельный/работающий на себя,self-employed/independent,Arbeit und Beruf,,Mein Vater ist selbstständig und hat eine kleine Firma.
+Ausbildung,die,die Ausbildungen,,профессиональное обучение/образование,vocational training,Arbeit und Beruf,,Er macht eine Ausbildung zum Koch.
+Erfahrung,die,die Erfahrungen,,опыт,experience,Arbeit und Beruf,,Haben Sie Erfahrung in diesem Beruf?
+Pause,die,die Pausen,,перерыв/пауза,break,Arbeit und Beruf,,Um zwölf Uhr machen wir eine Pause.
+Schule,die,die Schulen,,школа,school,Schule und Lernen,,Die Kinder gehen um acht Uhr zur Schule.
+Kurs,der,die Kurse,,курс/курсы,course,Schule und Lernen,,Der Kurs beginnt nächsten Montag um 18 Uhr.
+lernen,,,hat gelernt,учить/учиться,to learn,Schule und Lernen,,Ich lerne jeden Tag eine halbe Stunde Deutsch.
+Prüfung,die,die Prüfungen,,экзамен,exam,Schule und Lernen,,Im Juni mache ich die A2-Prüfung.
+richtig,,,,правильный/правильно,correct/right,Schule und Lernen,,Ist meine Antwort richtig?
+Hausaufgabe,die,die Hausaufgaben,,домашнее задание,homework,Schule und Lernen,,Hast du deine Hausaufgaben schon gemacht?
+verstehen,,,hat verstanden,понимать,to understand,Schule und Lernen,,"Entschuldigung, das habe ich nicht verstanden."
+Lehrer,der,die Lehrer,,учитель/преподаватель,teacher,Schule und Lernen,,Unser Lehrer erklärt die Grammatik sehr gut.
+Schüler,der,die Schüler,,ученик/школьник,pupil/student,Schule und Lernen,,In der Klasse sind 25 Schüler.
+wiederholen,,,hat wiederholt,повторять,to repeat,Schule und Lernen,,Können Sie das bitte wiederholen?
+Unterricht,der,,,занятия/урок,lessons/class,Schule und Lernen,,Der Unterricht fängt um acht Uhr an.
+falsch,,,,неправильный/неправильно,wrong,Schule und Lernen,,Dieser Satz ist leider falsch.
+Fach,das,die Fächer,,предмет (учебный),subject,Schule und Lernen,,Welches Fach magst du am liebsten?
+bestehen,,,hat bestanden,сдать (экзамен)/выдержать,to pass (an exam),Schule und Lernen,,Ich habe die Prüfung bestanden!
+Note,die,die Noten,,оценка,grade/mark,Schule und Lernen,,Ich habe in Deutsch eine gute Note bekommen.
+Fehler,der,die Fehler,,ошибка,mistake,Schule und Lernen,,Im Test habe ich nur zwei Fehler gemacht.
+studieren,,,hat studiert,учиться в вузе/изучать,to study (at university),Schule und Lernen,,Er studiert Medizin in Berlin.
+Wörterbuch,das,die Wörterbücher,,словарь,dictionary,Schule und Lernen,,Darf ich im Test ein Wörterbuch benutzen?
+schwierig,,,,трудный/сложный,difficult,Schule und Lernen,,Die Grammatik ist am Anfang ziemlich schwierig.
+Sprache,die,die Sprachen,,язык,language,Schule und Lernen,,Welche Sprachen sprichst du?
+teilnehmen,,,hat teilgenommen,участвовать/принимать участие,to take part,Schule und Lernen,,Ich nehme an einem Deutschkurs teil.
+Universität,die,die Universitäten,,университет,university,Schule und Lernen,,Meine Schwester studiert an der Universität in Wien.
+Zug,der,die Züge,,поезд,train,Reisen und Verkehr,,Ich fahre mit dem Zug nach Hamburg.
+Bahnhof,der,die Bahnhöfe,,вокзал,train station,Reisen und Verkehr,,Wir treffen uns um neun am Bahnhof.
+fahren,,,ist gefahren,ехать/ездить,to go/drive,Reisen und Verkehr,,Wir sind mit dem Auto nach Österreich gefahren.
+Fahrkarte,die,die Fahrkarten,,билет (на транспорт),ticket,Reisen und Verkehr,,Die Fahrkarte kannst du am Automaten kaufen.
+schnell,,,,быстрый/быстро,fast,Reisen und Verkehr,,Mit dem Zug bist du schnell in Berlin.
+Bus,der,die Busse,,автобус,bus,Reisen und Verkehr,,Der Bus fährt alle zehn Minuten.
+abfahren,,,ist abgefahren,отправляться/уезжать,to depart,Reisen und Verkehr,,Wann fährt der nächste Zug nach Köln ab?
+Gleis,das,die Gleise,,путь/платформа,platform/track,Reisen und Verkehr,,Der Zug fährt heute von Gleis 5 ab.
+Haltestelle,die,die Haltestellen,,остановка,(bus/tram) stop,Reisen und Verkehr,,Wo ist die nächste Haltestelle?
+ankommen,,,ist angekommen,прибывать/приезжать,to arrive,Reisen und Verkehr,,Der Bus kommt um 14:30 Uhr in Dresden an.
+Flughafen,der,die Flughäfen,,аэропорт,airport,Reisen und Verkehr,,Wie komme ich am besten zum Flughafen?
+direkt,,,,прямо/напрямую/без пересадок,direct(ly),Reisen und Verkehr,,Fährt dieser Zug direkt nach Berlin?
+Reise,die,die Reisen,,путешествие/поездка,trip/journey,Reisen und Verkehr,,Die Reise nach Italien war wunderschön.
+umsteigen,,,ist umgestiegen,делать пересадку/пересаживаться,to change (trains),Reisen und Verkehr,,In Frankfurt müssen Sie umsteigen.
+Urlaub,der,die Urlaube,,отпуск,holiday/vacation,Reisen und Verkehr,,Im August machen wir Urlaub in Spanien.
+Gepäck,das,,,багаж,luggage,Reisen und Verkehr,,Wie viel Gepäck darf ich mitnehmen?
+buchen,,,hat gebucht,бронировать/заказывать,to book,Reisen und Verkehr,,Ich möchte ein Doppelzimmer für zwei Nächte buchen.
+Koffer,der,die Koffer,,чемодан,suitcase,Reisen und Verkehr,,Mein Koffer ist leider zu schwer.
+frei,,,,свободный,free/vacant,Reisen und Verkehr,,"Entschuldigung, ist dieser Platz noch frei?"
+Hotel,das,die Hotels,,гостиница/отель,hotel,Reisen und Verkehr,13,Das Hotel liegt direkt am Meer.
+fliegen,,,ist geflogen,лететь/летать,to fly,Reisen und Verkehr,,Letzten Sommer sind wir nach Griechenland geflogen.
+Verspätung,die,die Verspätungen,,опоздание/задержка,delay,Reisen und Verkehr,,Der Zug hat 20 Minuten Verspätung.
+gehen,,,ist gegangen,идти/ходить,to go,Reisen und Verkehr,13,Ich gehe nach Hause.
+Bank,die,die Banken,,банк,bank,Stadt und Dienstleistungen,13,Ich muss heute noch zur Bank gehen.
+Post,die,,,почта,post office / mail,Stadt und Dienstleistungen,,Ich bringe das Paket zur Post.
+abholen,,,hat abgeholt,забирать/заезжать за,to pick up,Stadt und Dienstleistungen,,Sie können das Paket morgen bei der Post abholen.
+Polizei,die,,,полиция,police,Stadt und Dienstleistungen,,Ruf bitte sofort die Polizei!
+geradeaus,,,,прямо,straight ahead,Stadt und Dienstleistungen,,Gehen Sie hier immer geradeaus.
+Amt,das,die Ämter,,ведомство/учреждение,"public office, authority",Stadt und Dienstleistungen,,Für einen neuen Pass muss ich zum Amt.
+ausfüllen,,,hat ausgefüllt,заполнять,to fill in,Stadt und Dienstleistungen,,Ich habe das Formular schon ausgefüllt.
+Rathaus,das,die Rathäuser,,ратуша/мэрия,town hall,Stadt und Dienstleistungen,,Das Rathaus ist direkt am Marktplatz.
+Paket,das,die Pakete,,посылка,parcel,Stadt und Dienstleistungen,,Ich möchte dieses Paket nach Russland schicken.
+unterschreiben,,,hat unterschrieben,подписывать/расписываться,to sign,Stadt und Dienstleistungen,,Unterschreiben Sie bitte hier unten.
+Briefmarke,die,die Briefmarken,,почтовая марка/марка,stamp,Stadt und Dienstleistungen,,"Eine Briefmarke für diesen Brief, bitte."
+gegenüber,,,,напротив,opposite,Stadt und Dienstleistungen,,Die Bank ist gegenüber vom Bahnhof.
+Kreuzung,die,die Kreuzungen,,перекрёсток,"crossroads, intersection",Stadt und Dienstleistungen,,An der Kreuzung gehen Sie nach links.
+abbiegen,,,ist abgebogen,поворачивать/сворачивать,to turn (left/right),Stadt und Dienstleistungen,,Biegen Sie an der Ampel rechts ab.
+Ampel,die,die Ampeln,,светофор,traffic light,Stadt und Dienstleistungen,,Fahren Sie bis zur Ampel und dann rechts.
+Ecke,die,die Ecken,,угол,corner,Stadt und Dienstleistungen,,Die Apotheke ist gleich um die Ecke.
+wechseln,,,hat gewechselt,менять/обменивать,"to change, exchange",Stadt und Dienstleistungen,,Kann ich hier Geld wechseln?
+Formular,das,die Formulare,,бланк/анкета,form,Stadt und Dienstleistungen,,Bitte füllen Sie dieses Formular aus.
+geöffnet,,,,открыто/открыт,open,Stadt und Dienstleistungen,,Das Rathaus ist heute bis 12 Uhr geöffnet.
+Ausweis,der,die Ausweise,,удостоверение личности/документ,ID card,Stadt und Dienstleistungen,,Haben Sie Ihren Ausweis dabei?
+sich anmelden,,,hat sich angemeldet,регистрироваться/записываться,to register,Stadt und Dienstleistungen,,Nach dem Umzug muss ich mich beim Amt anmelden.
+Konto,das,die Konten,,банковский счёт/счёт,bank account,Stadt und Dienstleistungen,,Das Geld ist schon auf meinem Konto.
+Straße,die,die Straßen,,улица,street,Stadt und Dienstleistungen,13,Gehen Sie die Straße geradeaus.
+Wetter,das,,,погода,weather,Wetter und Natur,,Wie ist das Wetter heute in Berlin?
+Sonne,die,,,солнце,sun,Wetter und Natur,,Im Sommer liegen wir gern in der Sonne.
+regnen,,,hat geregnet,идёт дождь,to rain,Wetter und Natur,,Es regnet schon den ganzen Tag.
+Regen,der,,,дождь,rain,Wetter und Natur,,Morgen gibt es im Norden viel Regen.
+sonnig,,,,солнечный/солнечно,sunny,Wetter und Natur,,Morgen wird es sonnig und warm.
+Schnee,der,,,снег,snow,Wetter und Natur,,Im Winter liegt in den Bergen viel Schnee.
+schneien,,,hat geschneit,идёт снег,to snow,Wetter und Natur,,Gestern hat es in München geschneit.
+Wind,der,die Winde,,ветер,wind,Wetter und Natur,,Am Nachmittag kommt starker Wind.
+Wolke,die,die Wolken,,облако/туча,cloud,Wetter und Natur,,Am Abend kommen dicke Wolken.
+scheinen,,,hat geschienen,светить/сиять,to shine,Wetter und Natur,,Am Wochenende scheint endlich die Sonne.
+Gewitter,das,die Gewitter,,гроза,thunderstorm,Wetter und Natur,,Heute Abend gibt es vielleicht ein Gewitter.
+warm,,,,тёплый/тепло,warm,Wetter und Natur,,Im Juli ist es meistens sehr warm.
+Temperatur,die,die Temperaturen,,температура,temperature,Wetter und Natur,,Die Temperaturen liegen heute bei 25 Grad.
+frieren,,,hat gefroren,мёрзнуть,"to be cold, freeze",Wetter und Natur,,"Mach bitte das Fenster zu, ich friere."
+Jahreszeit,die,die Jahreszeiten,,время года,season,Wetter und Natur,,Welche Jahreszeit magst du am liebsten?
+Wald,der,die Wälder,,лес,forest,Wetter und Natur,,Am Sonntag gehen wir im Wald spazieren.
+trennen,,,hat getrennt,разделять/сортировать,"to separate, sort",Wetter und Natur,,In Deutschland trennt man den Müll.
+Berg,der,die Berge,,гора,mountain,Wetter und Natur,,Im Sommer fahren wir in die Berge.
+kalt,,,,холодный/холодно,cold,Wetter und Natur,,"Zieh eine Jacke an, es ist kalt draußen."
+See,der,die Seen,,озеро,lake,Wetter und Natur,,Im Sommer schwimmen wir oft im See.
+Tier,das,die Tiere,,животное/зверь,animal,Wetter und Natur,,Hast du Tiere zu Hause?
+Umwelt,die,,,окружающая среда/экология,environment,Wetter und Natur,,Fahrrad fahren ist gut für die Umwelt.
+schön,,,,красивый,beautiful,Wetter und Natur,16,Das Wetter ist heute sehr schön.
+Fest,das,die Feste,,праздник/торжество,"celebration, festival",Feste und Feiern,,Am Samstag gibt es ein Fest in unserer Straße.
+Feier,die,die Feiern,,празднование/вечеринка/торжество,"celebration, party",Feste und Feiern,,Die Feier beginnt um 19 Uhr.
+feiern,,,hat gefeiert,праздновать/отмечать,to celebrate,Feste und Feiern,,Wir feiern am Samstag im Garten.
+Party,die,die Partys,,вечеринка,party,Feste und Feiern,,Kommst du am Freitag zu meiner Party?
+herzlich,,,,сердечный/искренний/сердечно,"warm, cordial",Feste und Feiern,,Herzlichen Dank für das schöne Geschenk!
+Geburtstag,der,die Geburtstage,,день рождения,birthday,Feste und Feiern,,Am Samstag habe ich Geburtstag.
+einladen,,,hat eingeladen,приглашать,to invite,Feste und Feiern,,Ich möchte dich zu meiner Party einladen.
+Einladung,die,die Einladungen,,приглашение,invitation,Feste und Feiern,,Vielen Dank für deine Einladung!
+Geschenk,das,die Geschenke,,подарок,"present, gift",Feste und Feiern,,Ich brauche noch ein Geschenk für Anna.
+schenken,,,hat geschenkt,дарить,to give (as a gift),Feste und Feiern,,Was schenkst du deiner Mutter?
+Gast,der,die Gäste,,гость,guest,Feste und Feiern,,Wir haben am Wochenende viele Gäste.
+froh,,,,рад/радостный/весёлый,"happy, glad",Feste und Feiern,,Frohe Weihnachten und ein gutes neues Jahr!
+Hochzeit,die,die Hochzeiten,,свадьба,wedding,Feste und Feiern,,Meine Schwester feiert im Mai Hochzeit.
+gratulieren,,,hat gratuliert,поздравлять,to congratulate,Feste und Feiern,,Ich gratuliere dir zum Geburtstag!
+Weihnachten,das,,,Рождество,Christmas,Feste und Feiern,,An Weihnachten besuche ich meine Eltern.
+Ostern,das,,,Пасха,Easter,Feste und Feiern,,Zu Ostern suchen die Kinder Eier im Garten.
+mitbringen,,,hat mitgebracht,приносить с собой,to bring along,Feste und Feiern,,Soll ich einen Salat mitbringen?
+Glückwunsch,der,die Glückwünsche,,поздравление/пожелание,congratulations,Feste und Feiern,,Herzlichen Glückwunsch zum Geburtstag!
+leider,,,,к сожалению,unfortunately,Feste und Feiern,,Leider kann ich nicht zu deiner Feier kommen.
+Feiertag,der,die Feiertage,,праздничный день/праздник,public holiday,Feste und Feiern,,"Morgen ist ein Feiertag, die Geschäfte sind zu."
+absagen,,,hat abgesagt,отменять/отказываться,"to cancel, decline",Feste und Feiern,,Leider muss ich für Samstag absagen.
+sich freuen,,,hat sich gefreut,радоваться,"to be happy, look forward",Feste und Feiern,,Ich freue mich sehr auf deine Party.
+Handy,das,die Handys,,мобильный телефон/мобильник,mobile phone,Medien und Kommunikation,,Ich habe mein Handy zu Hause vergessen.
+Telefon,das,die Telefone,,телефон,telephone,Medien und Kommunikation,,"Entschuldigung, mein Telefon klingelt."
+anrufen,,,hat angerufen,звонить (по телефону),to call,Medien und Kommunikation,,Ruf mich bitte heute Abend an.
+Anruf,der,die Anrufe,,звонок,phone call,Medien und Kommunikation,,Danke für deinen Anruf!
+besetzt,,,,занято/занят,"busy, engaged",Medien und Kommunikation,,"Ich rufe an, aber es ist immer besetzt."
+Anrufbeantworter,der,die Anrufbeantworter,,автоответчик,answering machine,Medien und Kommunikation,,Ich habe deine Nachricht auf dem Anrufbeantworter gehört.
+zurückrufen,,,hat zurückgerufen,перезванивать,to call back,Medien und Kommunikation,,Bitte rufen Sie mich so schnell wie möglich zurück.
+Nachricht,die,die Nachrichten,,сообщение/новость,message; news,Medien und Kommunikation,,Schreib mir einfach eine Nachricht.
+E-Mail,die,die E-Mails,,электронное письмо/имейл,email,Medien und Kommunikation,,Ich schreibe dir morgen eine E-Mail.
+telefonieren,,,hat telefoniert,разговаривать по телефону,to talk on the phone,Medien und Kommunikation,,Ich telefoniere jeden Sonntag mit meiner Mutter.
+Brief,der,die Briefe,,письмо,letter,Medien und Kommunikation,,Ich habe einen Brief von meiner Oma bekommen.
+online,,,,онлайн/в интернете,online,Medien und Kommunikation,,Man kann die Tickets auch online kaufen.
+Internet,das,,,интернет,internet,Medien und Kommunikation,,Ich suche die Informationen im Internet.
+schicken,,,hat geschickt,отправлять/посылать,to send,Medien und Kommunikation,,Kannst du mir die Fotos schicken?
+Computer,der,die Computer,,компьютер,computer,Medien und Kommunikation,,Mein Computer ist sehr langsam.
+Zeitung,die,die Zeitungen,,газета,newspaper,Medien und Kommunikation,,Mein Vater liest jeden Morgen die Zeitung.
+antworten,,,hat geantwortet,отвечать,"to answer, reply",Medien und Kommunikation,,Bitte antworte mir bis Freitag.
+Fernseher,der,die Fernseher,,телевизор,TV set,Medien und Kommunikation,,Wir haben einen neuen Fernseher gekauft.
+kaputt,,,,сломанный/сломан,broken,Medien und Kommunikation,,"Mein Handy ist kaputt, ich brauche ein neues."
+Radio,das,die Radios,,радио,radio,Medien und Kommunikation,,Beim Frühstück höre ich immer Radio.
+sich melden,,,hat sich gemeldet,давать о себе знать/выходить на связь,to get in touch,Medien und Kommunikation,,"Melde dich bitte, wenn du in Berlin bist."
+Programm,das,die Programme,,программа/передача,programme,Medien und Kommunikation,,Was kommt heute Abend im Programm?

@@ -8,6 +8,8 @@ vocab.py — чтение и запись словаря (файл words.csv).
     "plural": "die Ärzte",
     "russian": "врач",
     "english": "doctor",
+    "perfekt": "",
+    "thema": "Körper und Gesundheit",
     "lektion": "15",
     "example": "Der Arzt sagt: Sie müssen im Bett bleiben.",
     "key": "der Arzt",
@@ -20,6 +22,14 @@ import os
 
 # Столбцы, которые должны быть в первой строке CSV-файла
 COLUMNS = ["german", "article", "plural", "russian", "english", "lektion", "example"]
+
+# Необязательные столбцы: если их нет в файле, будут пустыми
+# thema   — тема экзамена Goethe A2 (например, "Wohnen")
+# perfekt — для глаголов: вспомогательный глагол + Partizip II ("ist gefahren")
+OPTIONAL_COLUMNS = ["thema", "perfekt"]
+
+# Порядок столбцов для нового файла
+ALL_COLUMNS = ["german", "article", "plural", "perfekt", "russian", "english", "thema", "lektion", "example"]
 
 # Допустимые артикли
 ARTICLES = ["der", "die", "das"]
@@ -98,7 +108,7 @@ def load_words(path):
     for line_number, row in enumerate(reader, start=2):
         # Собираем слово: берём каждый столбец и убираем пробелы по краям
         word = {}
-        for column in COLUMNS:
+        for column in COLUMNS + OPTIONAL_COLUMNS:
             value = row.get(column) or ""  # "or ''" — на случай, если в строке не хватает ячеек
             word[column] = value.strip()
 
@@ -158,17 +168,41 @@ def filter_by_lessons(words, lessons):
     return [word for word in words if word["lektion"] in lessons]
 
 
+def filter_by_topics(words, topics):
+    """Оставляет только слова выбранных тем. Если ничего не выбрано — все слова."""
+    if not topics:
+        return words
+    return [word for word in words if word["thema"] in topics]
+
+
+def is_verb_with_perfekt(word):
+    """Глагол, для которого в словаре указана форма Perfekt."""
+    return word["perfekt"] != ""
+
+
 def add_word(path, word):
     """Дописывает новое слово в конец CSV-файла (тем же разделителем, что уже в файле)."""
     if not os.path.exists(path):
         # Файла нет — создаём его с заголовком
         with open(path, "w", encoding="utf-8", newline="") as f:
-            csv.writer(f).writerow(COLUMNS)
+            csv.writer(f).writerow(ALL_COLUMNS)
 
     text = read_text(path)
     delimiter = detect_delimiter(text.split("\n")[0])
+    rows = list(csv.DictReader(io.StringIO(text), delimiter=delimiter))
     header = next(csv.reader(io.StringIO(text), delimiter=delimiter))
     header = [column.strip() for column in header]
+
+    # В старом файле может не быть новых столбцов (thema, perfekt) — добавляем их,
+    # переписав файл целиком, иначе новые данные потерялись бы
+    missing = [column for column in ALL_COLUMNS if column not in header]
+    if missing:
+        header = header + missing
+        with open(path, "w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=header, delimiter=delimiter, extrasaction="ignore")
+            writer.writeheader()
+            writer.writerows(rows)
+        text = read_text(path)
 
     with open(path, "a", encoding="utf-8", newline="") as f:
         # Если файл не заканчивается переводом строки, новое слово прилипло бы к последнему

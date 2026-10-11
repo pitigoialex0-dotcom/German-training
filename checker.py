@@ -16,6 +16,8 @@ checker.py — проверка ответа.
 - "wrong"         — неправильно.
 """
 
+import re
+
 ARTICLES = ["der", "die", "das"]
 
 # Какие буквы на что заменяем перед сравнением
@@ -39,13 +41,22 @@ def normalize(text):
 
 
 def split_variants(correct):
-    """Если правильных ответов несколько ('идти/ходить'), возвращает список ['идти', 'ходить']."""
+    """Если правильных ответов несколько ('идти/ходить'), возвращает список ['идти', 'ходить'].
+
+    Пояснение в скобках необязательно: для 'билет (на транспорт)' подойдёт и просто 'билет'.
+    """
     for separator in [",", ";"]:
         correct = correct.replace(separator, "/")
     variants = []
     for part in correct.split("/"):
-        if part.strip() != "":
-            variants.append(part.strip())
+        part = part.strip()
+        if part == "":
+            continue
+        variants.append(part)
+        if "(" in part:
+            without_brackets = re.sub(r"\(.*?\)", "", part).strip()
+            if without_brackets != "":
+                variants.append(without_brackets)
     return variants
 
 
@@ -133,3 +144,82 @@ def check_german(user_answer, word):
 def is_accepted(result):
     """Засчитан ли ответ (правильно или с опечаткой)."""
     return result["status"] in ["correct", "typo"]
+
+
+def check_perfekt(user_answer, word):
+    """Проверка формы Perfekt: правильный ответ, например, 'ist gefahren'.
+
+    Сначала проверяем вспомогательный глагол (haben/sein), потом причастие.
+    Перепутать haben и sein — самая частая ошибка на A2, поэтому опечаткой её не считаем.
+    """
+    correct = word["perfekt"]
+    correct_parts = correct.split(maxsplit=1)
+    user_parts = user_answer.strip().split()
+
+    # Можно написать с местоимением: 'er ist gefahren' — местоимение просто убираем
+    if len(user_parts) > 0 and user_parts[0].lower() in ["er", "sie", "es"]:
+        user_parts = user_parts[1:]
+
+    if len(user_parts) == 0:
+        return {"status": "wrong", "hint": f"Пустой ответ. Правильно: {correct}"}
+    if len(correct_parts) < 2:
+        return check_answer(" ".join(user_parts), correct)
+    if len(user_parts) < 2:
+        return {"status": "wrong", "hint": f"Нужны вспомогательный глагол и причастие. Правильно: {correct}"}
+
+    same_helper = normalize(user_parts[0]) == normalize(correct_parts[0])
+    rest = check_answer(" ".join(user_parts[1:]), correct_parts[1])
+
+    if same_helper and rest["status"] != "wrong":
+        if rest["hint"] != "":
+            rest["hint"] = f"{rest['hint'].split(':')[0]}: {correct}"
+        return rest
+    if not same_helper and rest["status"] != "wrong":
+        helper = "sein" if normalize(correct_parts[0]) == "ist" else "haben"
+        return {"status": "wrong", "hint": f"Причастие верное, но вспомогательный глагол — {helper}: {correct}"}
+    return {"status": "wrong", "hint": f"Правильно: {correct}"}
+
+
+def sentence_words(text):
+    """Разбивает предложение на слова без знаков препинания: 'Ich bin müde.' → ['ich', 'bin', 'muede']."""
+    for mark in ".,!?;:\"„“«»()–—":
+        text = text.replace(mark, " ")
+    return normalize(text).split()
+
+
+def check_sentence(user_answer, correct):
+    """Проверка диктанта: сравниваем предложения целиком, прощая знаки препинания и опечатки.
+    На каждые 12 букв прощаем одну опечатку."""
+    user = " ".join(sentence_words(user_answer))
+    target = " ".join(sentence_words(correct))
+    if user == "":
+        return {"status": "wrong", "hint": "Пустой ответ — считаем как «не расслышал»."}
+    if user == target:
+        return {"status": "correct", "hint": ""}
+    if count_typos(user, target) <= max(1, len(target) // 12):
+        return {"status": "typo", "hint": "Почти идеально — посмотри на подсвеченные слова."}
+    return {"status": "wrong", "hint": ""}
+
+
+def sentence_diff(user_answer, correct):
+    """Для каждого слова правильного предложения говорит, написал ли ты его верно.
+
+    Возвращает список пар (слово, верно_ли): [('Ich', True), ('bin', False), ...].
+    Используется, чтобы подсветить ошибки в диктанте.
+    """
+    user_words = sentence_words(user_answer)
+    result = []
+    for original in correct.split():
+        clean = sentence_words(original)
+        if len(clean) == 0:
+            result.append((original, True))  # отдельный знак препинания, например «–»
+            continue
+        found = None
+        for user_word in user_words:
+            if count_typos(user_word, clean[0]) <= allowed_typos(clean[0]):
+                found = user_word
+                break
+        if found is not None:
+            user_words.remove(found)  # каждое слово ответа засчитываем только один раз
+        result.append((original, found is not None))
+    return result

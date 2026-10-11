@@ -1,0 +1,1257 @@
+{
+ "exam_info": {
+  "exam_name": "Goethe-Zertifikat A2 (версия для взрослых). Вариант для подростков называется «Goethe-Zertifikat A2: Fit in Deutsch». С 1 апреля 2016 года оба экзамена заменили прежние Start Deutsch 2 и Fit in Deutsch 2.",
+  "target_group": "Взрослая версия (Goethe-Zertifikat A2): рекомендуется с 16 лет. Подтверждает уровень A2 по шкале GER/CEFR. Goethe-Institut оценивает подготовку в 200–350 учебных часов по 45 минут, в зависимости от исходных знаний. Fit in Deutsch A2: для школьников 12–16 лет (так сказано на текущих страницах goethe.de и в Modellsatz Jugendliche; в старых источниках встречается 10–15 лет). По своим правилам (Durchführungsbestimmungen) Fit проводится вместе со взрослым экзаменом. У Fit те же 4 модуля, то же время (30/30/30/~15 минут), та же система баллов и тот же порог сдачи. Разница в содержании: задания и темы взяты из жизни подростков (школа, друзья, семья, свободное время, частная/школьная/общественная сфера), обращение чаще на «du». Пример: в Schreiben Teil 2 у подростков письмо адресовано учительнице («ты новенький в классе, учительница Frau Gross приглашает…»), а во взрослом Modellsatz письмо пишется начальнику, Herrn Lehmann. Для подготовки к взрослому экзамену берите материалы с пометкой «Erwachsene», а не «Jugendliche/Fit».",
+  "modules": [
+   {
+    "name_de": "Lesen",
+    "name_ru": "Чтение",
+    "minutes": "30",
+    "parts": [
+     {
+      "teil": "Teil 1 (Aufgaben 1–5)",
+      "description_ru": "Газетная или медийная статья (по данным издательских тренировочных материалов, около 200 слов). Нужно понять главную информацию и детали.",
+      "task_format": "5 заданий с выбором ответа a/b/c (Mehrfachauswahl, 3 варианта)"
+     },
+     {
+      "teil": "Teil 2 (Aufgaben 6–10)",
+      "description_ru": "Информационное табло или указатель: например, план этажей универмага (в Modellsatz это «Kaufhaus Alexa») или табло в аэропорту. По 5 коротким ситуациям нужно найти, куда идти или где нужная информация.",
+      "task_format": "5 заданий a/b/c"
+     },
+     {
+      "teil": "Teil 3 (Aufgaben 11–15)",
+      "description_ru": "Личное письмо (E-Mail). Понять, что пишет автор: планы, договорённости, причины.",
+      "task_format": "5 заданий a/b/c"
+     },
+     {
+      "teil": "Teil 4 (Aufgaben 16–20)",
+      "description_ru": "Объявления. Шесть человек ищут что-то в интернете (в Modellsatz это рестораны и кафе для свадьбы, деловой встречи, детского дня рождения и т. п.): один пример и 5 заданий. Для каждого человека нужно подобрать подходящее объявление из a–f. Объявление из примера повторно выбрать нельзя.",
+      "task_format": "Соотнесение (Zuordnung) 5 ситуаций с объявлениями a–f. Для одной ситуации подходящего объявления нет, туда пишется X."
+     }
+    ],
+    "tips_ru": [
+     "Всего 30 минут на 4 части, примерно по 7 минут на часть. Ответы нужно успеть перенести в бланк ответов (Antwortbogen) внутри этого же времени.",
+     "Сначала прочитайте вопросы и только потом текст. Ищите в тексте ключевые слова из вопроса или их синонимы, текст целиком не переводите.",
+     "В Teil 2 (указатель в универмаге) внимательно смотрите, к какой категории относится товар или услуга: в бытовой лексике A2 (одежда, электроника, продукты, касса, туалеты) много ловушек.",
+     "В Teil 4 ровно одно задание без ответа (X). Не пытайтесь «натянуть» объявление, если в нём не совпадает хотя бы одна деталь (время, цена, место, для кого).",
+     "В вариантах a/b/c часто есть слово прямо из текста, но в неверном контексте. Проверяйте смысл, а не совпадение слов.",
+     "Тренируйтесь на официальном Modellsatz и Übungssatz для взрослых и обязательно с таймером."
+    ]
+   },
+   {
+    "name_de": "Hören",
+    "name_ru": "Аудирование",
+    "minutes": "около 30 (аудиозапись Modellsatz длится около 22–23 минут, плюс время на перенос ответов)",
+    "parts": [
+     {
+      "teil": "Teil 1 (Aufgaben 1–5)",
+      "description_ru": "Пять коротких текстов. Типично это объявления, радио, сообщения на автоответчике. Нужно уловить конкретную информацию: время, место, цену, что делать.",
+      "task_format": "5 заданий a/b/c. Каждый текст звучит ДВАЖДЫ."
+     },
+     {
+      "teil": "Teil 2 (Aufgaben 6–10)",
+      "description_ru": "Один разговор (бытовой, частный). К 5 пунктам (людям, дням и т. п.) нужно подобрать подходящую картинку.",
+      "task_format": "Соотнесение 5 пунктов с картинками a–i, каждую букву можно взять только один раз. Текст звучит ОДИН раз."
+     },
+     {
+      "teil": "Teil 3 (Aufgaben 11–15)",
+      "description_ru": "Пять коротких бытовых диалогов (Einzelgespräche). Понять конкретную деталь.",
+      "task_format": "5 заданий a/b/c (часто с картинками). Каждый текст звучит ОДИН раз."
+     },
+     {
+      "teil": "Teil 4 (Aufgaben 16–20)",
+      "description_ru": "Интервью, например радиоинтервью. Понять высказывания и мнение собеседника.",
+      "task_format": "5 утверждений Ja/Nein. Текст звучит ДВАЖДЫ."
+     }
+    ],
+    "tips_ru": [
+     "Teil 2 и Teil 3 звучат только один раз. Пока идут паузы, заранее прочитайте задания и посмотрите на картинки, проговорите про себя немецкие слова к ним.",
+     "В Teil 1 и Teil 4 при первом прослушивании отметьте ответ, при втором проверьте его.",
+     "Отдельно тренируйте числа, время (halb acht, Viertel nach), дни недели, даты, цены, номера путей и этажей: на них построена большая часть заданий.",
+     "Типичная ловушка: в аудио сначала называют один вариант, потом его меняют («…nein, doch lieber am Donnerstag»). Правильный ответ почти всегда последний.",
+     "Если пропустили ответ, не застревайте: сразу переходите к следующему заданию, пустых ответов не оставляйте.",
+     "Слушайте официальные аудио Modellsatz и Übungssatz, плюс короткие бытовые подкасты и объявления на немецком."
+    ]
+   },
+   {
+    "name_de": "Schreiben",
+    "name_ru": "Письмо",
+    "minutes": "30",
+    "parts": [
+     {
+      "teil": "Teil 1",
+      "description_ru": "Короткое неформальное сообщение (SMS/кратко) другу или подруге на «du». Пример из Modellsatz: вы в городе и опаздываете на встречу с подругой Ekaterini. Нужно извиниться, объяснить причину и предложить новое место и время.",
+      "task_format": "Раскрыть все 3 пункта задания, объём 20–30 слов, неформальный регистр (Hallo/Liebe…, Liebe Grüße)"
+     },
+     {
+      "teil": "Teil 2",
+      "description_ru": "E-Mail более официального характера, на «Sie» (знакомому, начальнику, преподавателю, организации). Пример из Modellsatz: начальник Herr Lehmann пригласил вас на день рождения. Нужно поблагодарить и согласиться прийти, сообщить, что придёте не один, и спросить дорогу.",
+      "task_format": "Раскрыть все 3 пункта задания, объём 30–40 слов, формальный или полуформальный регистр (Sehr geehrter Herr…/Lieber Herr…, Mit freundlichen Grüßen / Viele Grüße)"
+     }
+    ],
+    "tips_ru": [
+     "Главный критерий: раскрыты ли ВСЕ 3 пункта. Пропущенный пункт стоит больше баллов, чем грамматическая ошибка. Начните с плана: одно-два предложения на каждый пункт.",
+     "Держитесь заданного объёма (20–30 и 30–40 слов). Слишком длинный текст ничего не даёт, а ошибок в нём больше.",
+     "Различайте регистры: в Teil 1 «du», «Hallo …!», «Liebe Grüße»; в Teil 2 «Sie», «Sehr geehrte Frau …», «Mit freundlichen Grüßen». Обращение и подпись обязательны.",
+     "Выучите готовые шаблоны: извиниться (Es tut mir leid, dass …), объяснить причину (… , weil …), предложить (Können wir uns um … am … treffen?), поблагодарить (Vielen Dank für die Einladung), спросить (Können Sie mir bitte sagen, wie …?).",
+     "Используйте связки и простые придаточные (weil, dass, wenn, deshalb, aber, dann) и Perfekt: это показывает уровень A2.",
+     "Оставьте 3–4 минуты на проверку: порядок слов (глагол на 2-м месте, в придаточном в конце), заглавные буквы у существительных, Sie/Ihnen с большой буквы.",
+     "Тексты оценивают два проверяющих независимо друг от друга по заданным критериям, итог считается как среднее."
+    ]
+   },
+   {
+    "name_de": "Sprechen",
+    "name_ru": "Говорение",
+    "minutes": "около 15 (парный экзамен; индивидуальный около 10)",
+    "parts": [
+     {
+      "teil": "Teil 1 (около 3 мин)",
+      "description_ru": "Вопросы о себе и партнёре (Fragen zur Person). Каждому выдают 4 карточки с ключевым словом по теме, например Geburtstag?, Wohnort?, Beruf?, Hobby?, Sprachen?, Familie?. По каждой карточке вы задаёте партнёру вопрос, он отвечает, потом роли меняются.",
+      "task_format": "Сформулировать 4 вопроса по карточкам-ключевым словам и ответить на 4 вопроса партнёра"
+     },
+     {
+      "teil": "Teil 2 (около 3 мин на каждого)",
+      "description_ru": "Рассказ о своей жизни. На карточке вопрос и 4 подсказки. Пример из Modellsatz: «Was machen Sie mit Ihrem Geld?» с подсказками Lebensmittel/Miete?, Sparen?, Reisen?, Kleidung?. Вы рассказываете о себе экзаменатору, затем отвечаете на 1–2 его вопроса.",
+      "task_format": "Связный монолог по 4 подсказкам и ответы на дополнительные вопросы экзаменатора"
+     },
+     {
+      "teil": "Teil 3 (около 5 мин)",
+      "description_ru": "Совместное планирование. У каждого свой ежедневник (Terminkalender) с занятыми часами. Нужно вместе найти время для общего дела; пример из Modellsatz: вместе купить подарок другу Patrick на день рождения.",
+      "task_format": "Диалог с партнёром: предлагать время, принимать или отклонять с причиной, договориться"
+     }
+    ],
+    "tips_ru": [
+     "Teil 1: правильно стройте вопросы. W-Frage: «Wo wohnst du / wohnen Sie?»; Ja/Nein-Frage: глагол на первом месте. Отвечайте полным предложением с небольшой деталью («Ich wohne in Berlin, schon seit zwei Jahren.»).",
+     "Teil 2: раскройте все 4 подсказки, по 1–2 предложения на каждую, и добавьте причину (weil …) и пример. Заранее подготовьте мини-рассказы на типичные темы: деньги, свободное время, выходные, жильё, еда, отпуск, работа или учёба, день рождения, покупки, транспорт.",
+     "Teil 3: выучите фразы для договорённости. «Hast du am Montag um 10 Uhr Zeit?», «Da kann ich leider nicht, da muss ich …», «Wie wäre es mit …?», «Das passt mir gut.», «Gut, dann treffen wir uns am … um …». В конце обязательно подтвердите итоговую договорённость.",
+     "Это парный экзамен: реагируйте на партнёра, переспрашивайте, не превращайте Teil 3 в монолог. Оценивается и умение взаимодействовать.",
+     "Если не поняли, переспросите: «Wie bitte? Können Sie das bitte wiederholen?». Это нормально и баллов не отнимает.",
+     "Части 1–3 оценивают два экзаменатора по заданным критериям, максимум 25 баллов. Нужно минимум 15."
+    ]
+   }
+  ],
+  "scoring_ru": "Максимум 100 баллов: письменная часть 75 (Lesen 25 + Hören 25 + Schreiben 25), устная часть Sprechen 25. В Lesen и Hören по 20 заданий (по 1 «Messpunkt» за каждое), сырые баллы умножаются на 1,25, получается до 25. В Schreiben максимум 20 «Messpunkte» (среднее от двух проверяющих), тоже ×1,25, до 25. Sprechen максимум 25. Экзамен сдан, если набрано не меньше 60 баллов (60%) и все части пройдены, причём отдельно в письменной части нужно не меньше 45 из 75 и в Sprechen не меньше 15 из 25. Если не выполнен хотя бы один из этих порогов, экзамен не сдан, даже при сумме 60. Модульность: при первой регистрации можно записаться только на весь экзамен целиком, отдельные модули (как на B1/B2) сдавать нельзя. Если экзамен не сдан, можно пересдать либо только устную часть (Sprechen), либо только всю письменную (Lesen + Hören + Schreiben вместе). Отдельно Lesen или Hören пересдать нельзя. По Durchführungsbestimmungen частичная пересдача возможна в течение года и в том же экзаменационном центре, права на неё нет (решает центр), может взиматься сбор. Письменная часть идёт подряд около 90 минут, устная проводится отдельно (иногда в другой день). Из Durchführungsbestimmungen от 01.09.2025: экзамен может проводиться в цифровом формате в центре, письменные модули сдаются на ноутбуке. Формат заданий при этом не меняется.",
+  "schreiben_word_counts": "Teil 1: 20–30 слов (короткое неформальное сообщение/SMS другу, 3 пункта). Teil 2: 30–40 слов (E-Mail на «Sie», формальная/полуформальная, 3 пункта). Время на обе части вместе 30 минут.",
+  "official_topics": [
+   "Person und Familie",
+   "Wohnen / nähere Umgebung",
+   "Einkaufen",
+   "Arbeit / Schule",
+   "Termine und Verabredungen",
+   "Einladungen und Feste",
+   "Geld und Konsum",
+   "Restaurant und Café",
+   "Geschenke",
+   "Zahlen, Uhrzeit, Datum",
+   "Farben",
+   "Länder und Nationalitäten",
+   "Berufe"
+  ],
+  "wortliste_size": "Около 1300 лексических единиц: так сказано в тексте официальной Goethe-Zertifikat A2 Wortliste (PDF около 410 КБ, версия 03 от 2020 года). Структура: введение, тематические «Wortgruppen» (см. official_topics), затем алфавитный словарь с примерами предложений. Сам Goethe-Institut указывает, что список показывает требования уровня, а не служит тренажёром для зубрёжки.",
+  "sources": [
+   "https://www.goethe.de/pro/relaunch/prf/materialien/A2/A2_Modellsatz_Erwachsene.pdf",
+   "https://www.goethe.de/pro/relaunch/prf/materialien/A2/A2_Uebungssatz_Erwachsene.pdf",
+   "https://www.goethe.de/pro/relaunch/prf/de/Durchfuehrungsbestimmungen_A2.pdf",
+   "https://www.goethe.de/pro/relaunch/prf/en/Durchfuehrungsbestimmungen_A2.pdf",
+   "https://www.goethe.de/pro/relaunch/prf/de/Goethe-Zertifikat_A2_Wortliste.pdf",
+   "https://www.goethe.de/pro/relaunch/prf/materialien/A2_fit/A2_Modellsatz_Jugendliche.pdf",
+   "https://www.goethe.de/pro/relaunch/prf/materialien/A2_fit/A2_Uebungssatz_Jugendliche.pdf",
+   "https://www.goethe.de/resources/files/pdf62/Pruefungsziele_Testbeschreibung_A2_Fit231.pdf",
+   "https://www.goethe.de/en/spr/prf/ueb/pa2.html",
+   "https://www.goethe.de/ins/de/de/prf/prf/gzsd2/ub2.html",
+   "https://www.goethe.de/ins/de/de/prf/gzsd2.cfm",
+   "https://www.goethe.de/ins/ps/de/spr/prf/gzsd2.html",
+   "https://www.goethe.de/ins/dk/de/spr/prf/gzfit2.cfm",
+   "https://www.goethe.de/ins/it/de/spr/mag/21067350.html",
+   "https://bfu.goethe.de/a2_mod_2MX5/",
+   "https://bfu.goethe.de/a2_mod_2MX5/hoeren.php",
+   "https://bfu.goethe.de/a2_mod_2MX5/schreiben.php",
+   "https://bfu.goethe.de/a2_mod_2MX5/sprechen.php",
+   "https://shop.hueber.de/media/hueber_dateien/Internet_Inhaltsverz/Red1/978-3-19-051868-5_Inhalt.pdf",
+   "https://www.klett-sprachen.es/downloads/19077/2_29_5FProbeauszug_5FGoethe_2DZertifikat_5FA2/pdf",
+   "https://www.klett-sprachen.de/download/10108/Netzwerk_A2_Pruefungstraining_Goethe_Zertifikat.pdf",
+   "https://deutsch-meister.de/leitfaden/goethe-a2/"
+  ],
+  "uncertain": [
+   "ВАЖНО о методе: прямое скачивание страниц и PDF с goethe.de было невозможно (политика egress-прокси давала 403, WebFetch не резолвил DNS). Все факты взяты из выдержек поисковой системы (WebSearch) по перечисленным официальным PDF и страницам. Постранично официальные документы не прочитаны.",
+   "Полный официальный список тем (раздел «Themen» в книге «Goethe-Zertifikat A2 – Prüfungsziele, Testbeschreibung», Hueber, ISBN 978-3-19-051868-5, около стр. 68) получить не удалось. Список в official_topics собран из групп слов Wortliste, описания уровня в Modellsatz и ситуаций Modellsatz. Темы Wohnen/Arbeit/Gesundheit/Reisen/Ämter/Freizeit взяты из вторичного источника (deutsch-meister.de).",
+   "В описании уровня A2 в Modellsatz в одной выдержке стоит «Schule», в стандартной формулировке GER «Arbeit». Точное слово в версии для взрослых не проверено.",
+   "Распределение баллов Sprechen по частям (в сторонних источниках 8/8/9 или 4/8/8 + произношение) и точные критерии оценки официально не проверены. Известно только: максимум 25, минимум 15, оценивают два экзаменатора.",
+   "Распределение 20 Messpunkte в Schreiben между Teil 1 и Teil 2 (вероятно 10 + 10) не проверено.",
+   "Длина текста в Lesen Teil 1 (около 200 слов) известна только из материалов издательства и сторонних сайтов.",
+   "Типы текстов в Hören Teil 1 (объявления/радио/автоответчик) и конкретное содержание Hören Teil 2 (например, «кто что делает в какой день») официально не проверены. Подтверждено: 5 текстов ×2 прослушивания a/b/c; разговор ×1 с соотнесением картинок a–i; 5 диалогов ×1 a/b/c; интервью ×2 Ja/Nein.",
+   "Есть ли в Sprechen A2 время на подготовку, не проверено (насколько известно, отдельной подготовки нет, в отличие от B1).",
+   "Детали Fit in Deutsch A2 по частям (типы текстов в Lesen/Hören, точная задача Schreiben Teil 1) подтверждены лишь частично. Подтверждено: та же структура и время, те же пороги (45/75 и 15/25), возраст 12–16, пример Schreiben Teil 2 с учительницей Frau Gross.",
+   "Условия частичной пересдачи (в течение года, в том же центре, без права на пересдачу) взяты из Durchführungsbestimmungen в редакциях 2020–2025. На практике зависят от конкретного центра.",
+   "Что в Lesen Teil 2 среди вариантов есть «anderer Stock», не проверено.",
+   "Цифра около 1300 единиц в Wortliste взята из выдержки текста Wortliste (версия 2020), точный подсчёт не делался.",
+   "Сторонние «2026»-гайды указывают на обновления, но официального объявления о новом формате A2 в 2025–2026 годах не найдено. Изменения 2025 года касаются только цифрового проведения (Durchführungsbestimmungen от 01.09.2025)."
+  ],
+  "topics_note": "Сводный список по группам слов Wortliste и ситуациям из официального Modellsatz. Полный перечень тем (книга «Prüfungsziele, Testbeschreibung») получить не удалось.",
+  "method_note": "Факты собраны по официальным страницам и PDF goethe.de через выдержки поисковика: прямое скачивание PDF было недоступно. Перед экзаменом сверься с актуальными Durchführungsbestimmungen своего центра."
+ },
+ "schreiben": [
+  {
+   "teil": 1,
+   "thema": "Reisen und Verkehr",
+   "situation_ru": "Вы едете на поезде к подруге Лене. Вы договорились встретиться в 15:00 в кафе у вокзала. Но поезд опаздывает на час. Напишите Лене короткое сообщение (SMS).",
+   "aufgabe_de": "Sie fahren mit dem Zug zu Ihrer Freundin Lena. Sie wollen sich um 15 Uhr im Café am Bahnhof treffen. Ihr Zug hat eine Stunde Verspätung. Schreiben Sie Lena eine SMS.",
+   "punkte": [
+    "Entschuldigen Sie sich.",
+    "Erklären Sie, warum Sie später kommen.",
+    "Machen Sie einen Vorschlag: neue Uhrzeit und neuer Treffpunkt."
+   ],
+   "min_words": 20,
+   "max_words": 30,
+   "musterloesung": "Liebe Lena,\nes tut mir leid, aber ich komme später. Mein Zug hat eine Stunde Verspätung. Treffen wir uns um 16 Uhr direkt am Gleis 5?\nLiebe Grüße\nAlex"
+  },
+  {
+   "teil": 1,
+   "thema": "Körper und Gesundheit",
+   "situation_ru": "Ваш друг Макс пригласил вас в субботу утром на пробежку в парке. Но вы заболели. Напишите Максу SMS.",
+   "aufgabe_de": "Ihr Freund Max möchte am Samstagmorgen mit Ihnen im Park joggen. Aber Sie sind krank. Schreiben Sie Max eine SMS.",
+   "punkte": [
+    "Sagen Sie ab.",
+    "Schreiben Sie, was Sie haben.",
+    "Schlagen Sie einen neuen Termin vor."
+   ],
+   "min_words": 20,
+   "max_words": 30,
+   "musterloesung": "Hallo Max,\nleider kann ich am Samstag nicht joggen. Ich habe Fieber und starke Halsschmerzen. Wollen wir nächsten Samstag um zehn Uhr zusammen laufen?\nViele Grüße\nAlex"
+  },
+  {
+   "teil": 1,
+   "thema": "Wohnen",
+   "situation_ru": "В следующую субботу вы переезжаете в новую квартиру, и вам нужна помощь. Напишите другу Тиму SMS.",
+   "aufgabe_de": "Sie ziehen am nächsten Samstag in eine neue Wohnung und brauchen Hilfe. Schreiben Sie Ihrem Freund Tim eine SMS.",
+   "punkte": [
+    "Fragen Sie, ob Tim Ihnen helfen kann.",
+    "Schreiben Sie, wann und wo Sie sich treffen.",
+    "Schreiben Sie, was Sie als Dank für Tim machen."
+   ],
+   "min_words": 20,
+   "max_words": 30,
+   "musterloesung": "Hallo Tim,\nam Samstag ziehe ich um. Hilfst du mir? Wir treffen uns um 9 Uhr vor meiner alten Wohnung. Als Dank koche ich für dich!\nLiebe Grüße\nAlex"
+  },
+  {
+   "teil": 1,
+   "thema": "Einkaufen und Kleidung",
+   "situation_ru": "Вы купили в универмаге куртку, но дома увидели, что она вам мала. Вы хотите её обменять и просите подругу Сару пойти с вами. Напишите Саре SMS.",
+   "aufgabe_de": "Sie haben im Kaufhaus eine Jacke gekauft. Zu Hause sehen Sie: Die Jacke ist zu klein. Sie möchten sie umtauschen. Ihre Freundin Sara soll mitkommen. Schreiben Sie Sara eine SMS.",
+   "punkte": [
+    "Beschreiben Sie das Problem.",
+    "Fragen Sie, ob Sara mitkommt.",
+    "Schlagen Sie eine Zeit vor."
+   ],
+   "min_words": 20,
+   "max_words": 30,
+   "musterloesung": "Hallo Sara,\nich habe eine Jacke gekauft, aber sie ist zu klein. Ich möchte sie umtauschen. Kommst du mit? Hast du morgen um 17 Uhr Zeit?\nLiebe Grüße\nAlex"
+  },
+  {
+   "teil": 1,
+   "thema": "Freizeit und Hobbys",
+   "situation_ru": "У вас есть два билета на концерт в пятницу вечером. Пригласите друга Пауля пойти с вами. Напишите ему SMS.",
+   "aufgabe_de": "Sie haben zwei Karten für ein Konzert am Freitagabend. Schreiben Sie Ihrem Freund Paul eine SMS.",
+   "punkte": [
+    "Laden Sie Paul ein.",
+    "Schreiben Sie, was für ein Konzert es ist.",
+    "Schlagen Sie einen Treffpunkt und eine Uhrzeit vor."
+   ],
+   "min_words": 20,
+   "max_words": 30,
+   "musterloesung": "Hallo Paul,\nich habe zwei Konzertkarten für Freitag. Kommst du mit? Eine Jazzband spielt im Stadtpark. Treffen wir uns um 19 Uhr an der Haltestelle Marktplatz?\nLiebe Grüße\nAlex"
+  },
+  {
+   "teil": 2,
+   "thema": "Arbeit und Beruf",
+   "situation_ru": "Ваш ребёнок заболел, и завтра вы не можете прийти на работу. На завтра в 10:00 у вас назначена встреча. Напишите e-mail своей начальнице, фрау Келлер.",
+   "aufgabe_de": "Ihr Kind ist krank. Sie können morgen nicht zur Arbeit kommen. Morgen um 10 Uhr haben Sie einen Termin. Schreiben Sie eine E-Mail an Ihre Chefin, Frau Keller.",
+   "punkte": [
+    "Schreiben Sie, warum Sie nicht kommen können.",
+    "Schreiben Sie, wann Sie wieder arbeiten.",
+    "Bitten Sie Frau Keller, Ihren Termin morgen abzusagen."
+   ],
+   "min_words": 30,
+   "max_words": 40,
+   "musterloesung": "Sehr geehrte Frau Keller,\nleider kann ich morgen nicht ins Büro kommen, weil mein Sohn krank ist. Übermorgen arbeite ich wieder. Könnten Sie bitte meinen Termin um 10 Uhr absagen? Vielen Dank!\nMit freundlichen Grüßen\nAlex Petrow"
+  },
+  {
+   "teil": 2,
+   "thema": "Schule und Lernen",
+   "situation_ru": "Вы ходите на курсы немецкого. На следующей неделе вы не сможете приходить на занятия. Напишите e-mail преподавательнице, фрау Шульц.",
+   "aufgabe_de": "Sie besuchen einen Deutschkurs. Nächste Woche können Sie nicht zum Kurs kommen. Schreiben Sie eine E-Mail an Ihre Kursleiterin, Frau Schulz.",
+   "punkte": [
+    "Entschuldigen Sie sich.",
+    "Erklären Sie, warum Sie nicht kommen können.",
+    "Fragen Sie nach den Hausaufgaben."
+   ],
+   "min_words": 30,
+   "max_words": 40,
+   "musterloesung": "Liebe Frau Schulz,\nes tut mir leid, aber ich kann nächste Woche nicht zum Kurs kommen. Ich muss für meine Firma nach Hamburg fahren. Können Sie mir bitte die Hausaufgaben per E-Mail schicken?\nViele Grüße\nAlex Petrow"
+  },
+  {
+   "teil": 2,
+   "thema": "Feste und Feiern",
+   "situation_ru": "Ваш сосед, господин Вагнер, пригласил вас на своё 60-летие в субботу. Вы не можете прийти. Напишите ему e-mail.",
+   "aufgabe_de": "Ihr Nachbar, Herr Wagner, hat Sie zu seinem 60. Geburtstag am Samstag eingeladen. Sie können leider nicht kommen. Schreiben Sie Herrn Wagner eine E-Mail.",
+   "punkte": [
+    "Bedanken Sie sich für die Einladung.",
+    "Erklären Sie, warum Sie nicht kommen können.",
+    "Schlagen Sie einen Besuch an einem anderen Tag vor."
+   ],
+   "min_words": 30,
+   "max_words": 40,
+   "musterloesung": "Lieber Herr Wagner,\nvielen Dank für Ihre Einladung! Leider kann ich am Samstag nicht kommen, weil ich bei meiner Schwester in München bin. Darf ich Sie am Sonntagnachmittag kurz besuchen? Ich bringe einen Kuchen mit.\nViele Grüße\nAlex Petrow"
+  },
+  {
+   "teil": 2,
+   "thema": "Stadt und Dienstleistungen",
+   "situation_ru": "Вчера вы забыли сумку в автобусе. Напишите e-mail в городское бюро находок (Fundbüro).",
+   "aufgabe_de": "Sie haben gestern Ihre Tasche im Bus vergessen. Schreiben Sie eine E-Mail an das Fundbüro der Stadt.",
+   "punkte": [
+    "Schreiben Sie, wann und in welchem Bus Sie die Tasche vergessen haben.",
+    "Beschreiben Sie die Tasche.",
+    "Fragen Sie nach den Öffnungszeiten."
+   ],
+   "min_words": 30,
+   "max_words": 40,
+   "musterloesung": "Sehr geehrte Damen und Herren,\nich habe gestern um 18 Uhr meine Tasche im Bus der Linie 12 vergessen. Sie ist schwarz und klein. Mein Handy ist darin. Wann hat das Fundbüro geöffnet?\nMit freundlichen Grüßen\nAlex Petrow"
+  },
+  {
+   "teil": 2,
+   "thema": "Essen und Trinken",
+   "situation_ru": "В интернете вы нашли объявление о курсе итальянской кухни. Напишите e-mail в кулинарную школу. Руководительницу курса зовут фрау Хоффманн.",
+   "aufgabe_de": "Sie haben im Internet eine Anzeige für einen italienischen Kochkurs gelesen. Schreiben Sie eine E-Mail an die Kochschule. Die Kursleiterin heißt Frau Hoffmann.",
+   "punkte": [
+    "Schreiben Sie, dass Sie am Kurs teilnehmen möchten.",
+    "Fragen Sie, was der Kurs kostet.",
+    "Fragen Sie, ob Sie etwas mitbringen müssen."
+   ],
+   "min_words": 30,
+   "max_words": 40,
+   "musterloesung": "Sehr geehrte Frau Hoffmann,\nich habe Ihre Anzeige gelesen und möchte gern am Kochkurs teilnehmen. Ich koche sehr gern italienisch. Wie viel kostet der Kurs? Muss ich etwas mitbringen, zum Beispiel Lebensmittel?\nMit freundlichen Grüßen\nAlex Petrow"
+  }
+ ],
+ "sprechen_teil1": [
+  {
+   "thema": "Person und Familie",
+   "wort": "Geburtstag?",
+   "frage": "Wann hast du Geburtstag?",
+   "antwort": "Ich habe am 14. Mai Geburtstag. Meistens feiere ich mit Freunden."
+  },
+  {
+   "thema": "Person und Familie",
+   "wort": "Geschwister?",
+   "frage": "Hast du Geschwister?",
+   "antwort": "Ja, ich habe einen Bruder. Er ist zwei Jahre älter als ich."
+  },
+  {
+   "thema": "Person und Familie",
+   "wort": "Sprachen?",
+   "frage": "Welche Sprachen sprichst du?",
+   "antwort": "Ich spreche Russisch, ein bisschen Englisch und jetzt auch Deutsch."
+  },
+  {
+   "thema": "Person und Familie",
+   "wort": "Herkunft?",
+   "frage": "Woher kommst du?",
+   "antwort": "Ich komme aus Russland, aus Samara. Das liegt an der Wolga."
+  },
+  {
+   "thema": "Wohnen",
+   "wort": "Wohnort?",
+   "frage": "Wo wohnst du?",
+   "antwort": "Ich wohne in Leipzig, im Zentrum. Dort wohne ich seit einem Jahr."
+  },
+  {
+   "thema": "Wohnen",
+   "wort": "Wohnung?",
+   "frage": "Wie groß ist deine Wohnung?",
+   "antwort": "Meine Wohnung hat zwei Zimmer, eine Küche und einen Balkon. Sie ist ungefähr 50 Quadratmeter groß."
+  },
+  {
+   "thema": "Wohnen",
+   "wort": "Nachbarn?",
+   "frage": "Wie sind deine Nachbarn?",
+   "antwort": "Meine Nachbarn sind sehr nett. Manchmal trinken wir zusammen Kaffee."
+  },
+  {
+   "thema": "Wohnen",
+   "wort": "Lieblingszimmer?",
+   "frage": "Welches Zimmer magst du am liebsten?",
+   "antwort": "Ich mag die Küche am liebsten, weil ich gern koche."
+  },
+  {
+   "thema": "Essen und Trinken",
+   "wort": "Frühstück?",
+   "frage": "Was isst du zum Frühstück?",
+   "antwort": "Ich esse meistens Brot mit Käse und trinke einen Kaffee."
+  },
+  {
+   "thema": "Essen und Trinken",
+   "wort": "Lieblingsessen?",
+   "frage": "Was ist dein Lieblingsessen?",
+   "antwort": "Mein Lieblingsessen sind Pelmeni. Aber ich esse auch gern Pizza."
+  },
+  {
+   "thema": "Essen und Trinken",
+   "wort": "Kochen?",
+   "frage": "Kochst du gern?",
+   "antwort": "Ja, ich koche gern, besonders am Wochenende. Dann habe ich mehr Zeit."
+  },
+  {
+   "thema": "Essen und Trinken",
+   "wort": "Restaurant?",
+   "frage": "Wie oft gehst du ins Restaurant?",
+   "antwort": "Ich gehe ungefähr einmal im Monat ins Restaurant, meistens mit Freunden."
+  },
+  {
+   "thema": "Einkaufen und Kleidung",
+   "wort": "Supermarkt?",
+   "frage": "Wo kaufst du Lebensmittel ein?",
+   "antwort": "Ich kaufe im Supermarkt neben meiner Wohnung ein. Das ist praktisch."
+  },
+  {
+   "thema": "Einkaufen und Kleidung",
+   "wort": "Kleidung?",
+   "frage": "Was ziehst du gern an?",
+   "antwort": "Ich trage gern Jeans und T-Shirts. Das ist bequem."
+  },
+  {
+   "thema": "Einkaufen und Kleidung",
+   "wort": "Online?",
+   "frage": "Kaufst du oft im Internet ein?",
+   "antwort": "Ja, ziemlich oft. Ich bestelle vor allem Bücher und Schuhe online."
+  },
+  {
+   "thema": "Einkaufen und Kleidung",
+   "wort": "Lieblingsfarbe?",
+   "frage": "Was ist deine Lieblingsfarbe?",
+   "antwort": "Meine Lieblingsfarbe ist Blau. Ich habe viele blaue Pullover."
+  },
+  {
+   "thema": "Alltag und Zeit",
+   "wort": "Aufstehen?",
+   "frage": "Wann stehst du morgens auf?",
+   "antwort": "Ich stehe um halb sieben auf. Am Wochenende schlafe ich länger."
+  },
+  {
+   "thema": "Alltag und Zeit",
+   "wort": "Wochenende?",
+   "frage": "Was machst du am Wochenende?",
+   "antwort": "Am Samstag kaufe ich ein und am Sonntag treffe ich Freunde."
+  },
+  {
+   "thema": "Alltag und Zeit",
+   "wort": "Abend?",
+   "frage": "Was machst du am Abend?",
+   "antwort": "Ich koche, lese ein bisschen und gehe um elf Uhr ins Bett."
+  },
+  {
+   "thema": "Alltag und Zeit",
+   "wort": "Haushalt?",
+   "frage": "Wer macht bei dir den Haushalt?",
+   "antwort": "Ich wohne allein, deshalb mache ich alles selbst."
+  },
+  {
+   "thema": "Freizeit und Hobbys",
+   "wort": "Hobby?",
+   "frage": "Was ist dein Hobby?",
+   "antwort": "Mein Hobby ist Fotografieren. Ich mache gern Fotos in der Natur."
+  },
+  {
+   "thema": "Freizeit und Hobbys",
+   "wort": "Sport?",
+   "frage": "Machst du Sport?",
+   "antwort": "Ja, ich gehe zweimal pro Woche schwimmen."
+  },
+  {
+   "thema": "Freizeit und Hobbys",
+   "wort": "Musik?",
+   "frage": "Welche Musik hörst du gern?",
+   "antwort": "Ich höre gern Rockmusik und manchmal auch Jazz."
+  },
+  {
+   "thema": "Freizeit und Hobbys",
+   "wort": "Bücher?",
+   "frage": "Liest du gern?",
+   "antwort": "Ja, ich lese gern Krimis, meistens abends im Bett."
+  },
+  {
+   "thema": "Körper und Gesundheit",
+   "wort": "Arzt?",
+   "frage": "Wie oft gehst du zum Arzt?",
+   "antwort": "Nicht oft. Ich gehe nur zum Arzt, wenn ich krank bin."
+  },
+  {
+   "thema": "Körper und Gesundheit",
+   "wort": "Gesund leben?",
+   "frage": "Was machst du für deine Gesundheit?",
+   "antwort": "Ich esse viel Obst und gehe jeden Tag spazieren."
+  },
+  {
+   "thema": "Körper und Gesundheit",
+   "wort": "Krank?",
+   "frage": "Was machst du, wenn du krank bist?",
+   "antwort": "Ich bleibe zu Hause, trinke viel Tee und schlafe viel."
+  },
+  {
+   "thema": "Körper und Gesundheit",
+   "wort": "Schlaf?",
+   "frage": "Wie viele Stunden schläfst du?",
+   "antwort": "Ich schlafe ungefähr sieben Stunden pro Nacht."
+  },
+  {
+   "thema": "Arbeit und Beruf",
+   "wort": "Beruf?",
+   "frage": "Was bist du von Beruf?",
+   "antwort": "Ich bin Programmierer. Ich arbeite bei einer IT-Firma."
+  },
+  {
+   "thema": "Arbeit und Beruf",
+   "wort": "Arbeitszeit?",
+   "frage": "Wie lange arbeitest du jeden Tag?",
+   "antwort": "Ich arbeite acht Stunden, von neun bis fünf Uhr."
+  },
+  {
+   "thema": "Arbeit und Beruf",
+   "wort": "Kollegen?",
+   "frage": "Wie sind deine Kollegen?",
+   "antwort": "Meine Kollegen sind freundlich. Wir essen oft zusammen zu Mittag."
+  },
+  {
+   "thema": "Arbeit und Beruf",
+   "wort": "Arbeitsweg?",
+   "frage": "Wie kommst du zur Arbeit?",
+   "antwort": "Ich fahre mit der Straßenbahn. Das dauert zwanzig Minuten."
+  },
+  {
+   "thema": "Schule und Lernen",
+   "wort": "Deutsch lernen?",
+   "frage": "Warum lernst du Deutsch?",
+   "antwort": "Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte."
+  },
+  {
+   "thema": "Schule und Lernen",
+   "wort": "Schule?",
+   "frage": "Wo bist du zur Schule gegangen?",
+   "antwort": "Ich bin in Samara zur Schule gegangen, elf Jahre lang."
+  },
+  {
+   "thema": "Schule und Lernen",
+   "wort": "Lieblingsfach?",
+   "frage": "Was war dein Lieblingsfach in der Schule?",
+   "antwort": "Mein Lieblingsfach war Mathe. Sport mochte ich nicht so gern."
+  },
+  {
+   "thema": "Schule und Lernen",
+   "wort": "Wörter lernen?",
+   "frage": "Wie lernst du neue Wörter?",
+   "antwort": "Ich schreibe die Wörter auf Karten und wiederhole sie jeden Tag."
+  },
+  {
+   "thema": "Reisen und Verkehr",
+   "wort": "Urlaub?",
+   "frage": "Wohin fährst du gern in den Urlaub?",
+   "antwort": "Ich fahre gern ans Meer, zum Beispiel nach Spanien."
+  },
+  {
+   "thema": "Reisen und Verkehr",
+   "wort": "Verkehrsmittel?",
+   "frage": "Fährst du lieber mit dem Auto oder mit dem Zug?",
+   "antwort": "Ich fahre lieber mit dem Zug. Da kann ich lesen."
+  },
+  {
+   "thema": "Reisen und Verkehr",
+   "wort": "Letzte Reise?",
+   "frage": "Wo warst du zuletzt im Urlaub?",
+   "antwort": "Letzten Sommer war ich in Österreich. Es war wunderbar."
+  },
+  {
+   "thema": "Reisen und Verkehr",
+   "wort": "Fahrrad?",
+   "frage": "Hast du ein Fahrrad?",
+   "antwort": "Ja, ich habe ein Fahrrad. Im Sommer fahre ich damit zur Arbeit."
+  },
+  {
+   "thema": "Stadt und Dienstleistungen",
+   "wort": "Stadt?",
+   "frage": "Wie gefällt dir deine Stadt?",
+   "antwort": "Meine Stadt gefällt mir gut. Es gibt viele Parks und Cafés."
+  },
+  {
+   "thema": "Stadt und Dienstleistungen",
+   "wort": "Bank?",
+   "frage": "Wie oft gehst du zur Bank?",
+   "antwort": "Fast nie. Ich mache alles online."
+  },
+  {
+   "thema": "Stadt und Dienstleistungen",
+   "wort": "Post?",
+   "frage": "Wann warst du zuletzt auf der Post?",
+   "antwort": "Letzte Woche. Ich habe ein Paket an meine Mutter geschickt."
+  },
+  {
+   "thema": "Stadt und Dienstleistungen",
+   "wort": "Friseur?",
+   "frage": "Wie oft gehst du zum Friseur?",
+   "antwort": "Ich gehe ungefähr alle sechs Wochen zum Friseur."
+  },
+  {
+   "thema": "Wetter und Natur",
+   "wort": "Jahreszeit?",
+   "frage": "Welche Jahreszeit magst du am liebsten?",
+   "antwort": "Ich mag den Sommer am liebsten, weil es warm ist."
+  },
+  {
+   "thema": "Wetter und Natur",
+   "wort": "Wetter heute?",
+   "frage": "Wie ist das Wetter heute?",
+   "antwort": "Heute ist es kalt und es regnet ein bisschen."
+  },
+  {
+   "thema": "Wetter und Natur",
+   "wort": "Haustier?",
+   "frage": "Hast du ein Haustier?",
+   "antwort": "Ja, ich habe eine Katze. Sie heißt Mila."
+  },
+  {
+   "thema": "Wetter und Natur",
+   "wort": "Natur?",
+   "frage": "Bist du gern in der Natur?",
+   "antwort": "Ja, sehr. Am Wochenende gehe ich oft im Wald spazieren."
+  },
+  {
+   "thema": "Feste und Feiern",
+   "wort": "Geburtstag feiern?",
+   "frage": "Wie feierst du deinen Geburtstag?",
+   "antwort": "Ich lade Freunde ein und wir essen zusammen Kuchen."
+  },
+  {
+   "thema": "Feste und Feiern",
+   "wort": "Lieblingsfest?",
+   "frage": "Was ist dein Lieblingsfest?",
+   "antwort": "Mein Lieblingsfest ist Neujahr. Dann besuche ich meine Familie in Samara."
+  },
+  {
+   "thema": "Feste und Feiern",
+   "wort": "Geschenke?",
+   "frage": "Was schenkst du deinen Freunden?",
+   "antwort": "Ich schenke oft Bücher oder Blumen."
+  },
+  {
+   "thema": "Feste und Feiern",
+   "wort": "Party?",
+   "frage": "Wann warst du zuletzt auf einer Party?",
+   "antwort": "Vor zwei Wochen. Mein Kollege hat seinen Geburtstag gefeiert."
+  },
+  {
+   "thema": "Medien und Kommunikation",
+   "wort": "Handy?",
+   "frage": "Wie oft benutzt du dein Handy?",
+   "antwort": "Sehr oft, vor allem für Nachrichten an meine Freunde."
+  },
+  {
+   "thema": "Medien und Kommunikation",
+   "wort": "Internet?",
+   "frage": "Was machst du im Internet?",
+   "antwort": "Ich sehe Videos, lese Nachrichten und lerne Deutsch mit Apps."
+  },
+  {
+   "thema": "Medien und Kommunikation",
+   "wort": "Fernsehen?",
+   "frage": "Siehst du gern fern?",
+   "antwort": "Nicht so oft. Ich sehe lieber Serien im Internet."
+  },
+  {
+   "thema": "Medien und Kommunikation",
+   "wort": "Zeitung?",
+   "frage": "Liest du Zeitung?",
+   "antwort": "Nein, ich lese die Nachrichten lieber online auf dem Handy."
+  }
+ ],
+ "sprechen_teil2": [
+  {
+   "thema": "Person und Familie",
+   "frage_de": "Wie wichtig ist Ihnen Ihre Familie?",
+   "stichpunkte": [
+    "Familienmitglieder?",
+    "Wohnort?",
+    "Treffen?",
+    "Gemeinsame Aktivitäten?"
+   ],
+   "beispiel": "Meine Familie ist mir sehr wichtig. Ich habe eine Mutter, einen Vater und eine jüngere Schwester. Meine Eltern wohnen in Samara, meine Schwester studiert in Moskau. Wir sehen uns leider nur zweimal im Jahr, aber wir telefonieren jeden Sonntag. Wenn wir zusammen sind, kochen wir viel und machen lange Spaziergänge."
+  },
+  {
+   "thema": "Wohnen",
+   "frage_de": "Wie wohnen Sie?",
+   "stichpunkte": [
+    "Wohnung oder Haus?",
+    "Zimmer?",
+    "Miete?",
+    "Nachbarn?"
+   ],
+   "beispiel": "Ich wohne in einer kleinen Wohnung im Stadtzentrum. Sie hat zwei Zimmer, eine Küche und ein Bad. Die Miete ist ziemlich hoch, ich bezahle 800 Euro im Monat. Meine Nachbarn sind ruhig und freundlich. Ich wohne gern hier, weil alles in der Nähe ist."
+  },
+  {
+   "thema": "Essen und Trinken",
+   "frage_de": "Was essen und trinken Sie gern?",
+   "stichpunkte": [
+    "Frühstück?",
+    "Kochen?",
+    "Restaurant?",
+    "Lieblingsessen?"
+   ],
+   "beispiel": "Morgens frühstücke ich nur schnell: ein Brot und einen Kaffee. Am Abend koche ich gern, meistens Gemüse mit Reis oder Nudeln. Ins Restaurant gehe ich nur am Wochenende, weil es teuer ist. Mein Lieblingsessen sind Pelmeni von meiner Mutter. In Deutschland esse ich auch gern Brezeln."
+  },
+  {
+   "thema": "Einkaufen und Kleidung",
+   "frage_de": "Wo und wie kaufen Sie ein?",
+   "stichpunkte": [
+    "Lebensmittel?",
+    "Kleidung?",
+    "Internet?",
+    "Geld?"
+   ],
+   "beispiel": "Lebensmittel kaufe ich im Supermarkt in meiner Straße, meistens am Samstag. Kleidung kaufe ich nicht so oft, vielleicht zweimal im Jahr. Ich bestelle viel im Internet, weil das schnell und bequem ist. Für Kleidung gebe ich nicht viel Geld aus. Für gute Schuhe bezahle ich aber gern mehr."
+  },
+  {
+   "thema": "Alltag und Zeit",
+   "frage_de": "Wie sieht Ihr Alltag aus?",
+   "stichpunkte": [
+    "Morgen?",
+    "Arbeit / Schule?",
+    "Abend?",
+    "Wochenende?"
+   ],
+   "beispiel": "Ich stehe jeden Tag um halb sieben auf und trinke zuerst einen Kaffee. Um halb neun fahre ich zur Arbeit und bin bis fünf Uhr im Büro. Am Abend koche ich, dann lerne ich eine halbe Stunde Deutsch. Am Wochenende habe ich mehr Zeit für Freunde und Sport. Am Sonntag schlafe ich gern lange."
+  },
+  {
+   "thema": "Freizeit und Hobbys",
+   "frage_de": "Was machen Sie in Ihrer Freizeit?",
+   "stichpunkte": [
+    "Sport?",
+    "Freunde?",
+    "Kino / Konzert?",
+    "Zu Hause?"
+   ],
+   "beispiel": "In meiner Freizeit mache ich gern Sport. Ich gehe zweimal pro Woche schwimmen. Am Wochenende treffe ich oft Freunde, wir gehen ins Café oder ins Kino. Letzten Monat war ich auf einem tollen Konzert. Zu Hause lese ich gern oder spiele Gitarre."
+  },
+  {
+   "thema": "Körper und Gesundheit",
+   "frage_de": "Was tun Sie für Ihre Gesundheit?",
+   "stichpunkte": [
+    "Essen?",
+    "Sport?",
+    "Schlaf?",
+    "Arzt?"
+   ],
+   "beispiel": "Ich versuche, gesund zu leben. Ich esse viel Obst und Gemüse, aber leider auch gern Schokolade. Zweimal pro Woche gehe ich schwimmen, und am Wochenende fahre ich oft Fahrrad. Ich schlafe meistens sieben Stunden, das ist mir wichtig. Zum Arzt gehe ich nur, wenn ich krank bin, und einmal im Jahr zum Zahnarzt."
+  },
+  {
+   "thema": "Arbeit und Beruf",
+   "frage_de": "Was machen Sie beruflich?",
+   "stichpunkte": [
+    "Beruf?",
+    "Arbeitszeit?",
+    "Kollegen?",
+    "Was gefällt Ihnen (nicht)?"
+   ],
+   "beispiel": "Ich bin Programmierer und arbeite bei einer kleinen IT-Firma. Ich arbeite von Montag bis Freitag, meistens von neun bis fünf Uhr. Zweimal pro Woche arbeite ich im Homeoffice. Meine Kollegen sind jung und sehr nett. Mir gefällt meine Arbeit, aber manchmal habe ich zu viel Stress."
+  },
+  {
+   "thema": "Schule und Lernen",
+   "frage_de": "Wie lernen Sie Deutsch?",
+   "stichpunkte": [
+    "Seit wann?",
+    "Kurs oder allein?",
+    "Was ist schwer?",
+    "Warum Deutsch?"
+   ],
+   "beispiel": "Ich lerne seit einem Jahr Deutsch. Zuerst habe ich allein mit einer App gelernt, jetzt besuche ich einen Kurs. Die Grammatik ist für mich schwer, besonders die Artikel. Ich lerne Deutsch, weil ich in Deutschland arbeiten möchte. Bald mache ich die Prüfung „Goethe-Zertifikat A2“."
+  },
+  {
+   "thema": "Reisen und Verkehr",
+   "frage_de": "Wie reisen Sie gern?",
+   "stichpunkte": [
+    "Verkehrsmittel?",
+    "Reiseziele?",
+    "Mit wem?",
+    "Letzte Reise?"
+   ],
+   "beispiel": "Ich reise sehr gern, am liebsten mit dem Zug. Im Zug kann ich lesen oder aus dem Fenster schauen. Ich fahre gern in große Städte, zum Beispiel nach Wien oder Prag. Meistens reise ich mit meinem besten Freund. Letzten Sommer waren wir zusammen in Österreich und sind viel gewandert."
+  },
+  {
+   "thema": "Stadt und Dienstleistungen",
+   "frage_de": "Wie gefällt Ihnen Ihre Stadt?",
+   "stichpunkte": [
+    "Wo wohnen Sie?",
+    "Was gibt es dort?",
+    "Verkehr?",
+    "Was fehlt?"
+   ],
+   "beispiel": "Ich wohne in Leipzig. Das ist eine große Stadt im Osten von Deutschland. Es gibt viele Parks, Museen und schöne Cafés. Mit der Straßenbahn kommt man schnell überall hin. Beim Bürgeramt muss man aber lange auf einen Termin warten. Ich finde, die Stadt braucht mehr Parkplätze für Fahrräder."
+  },
+  {
+   "thema": "Wetter und Natur",
+   "frage_de": "Welches Wetter mögen Sie?",
+   "stichpunkte": [
+    "Lieblingsjahreszeit?",
+    "Regen / Schnee?",
+    "Draußen?",
+    "Wetter in Ihrem Land?"
+   ],
+   "beispiel": "Ich mag warmes Wetter, deshalb ist der Sommer meine Lieblingsjahreszeit. Regen finde ich nicht so schlimm, aber Schnee mag ich nicht. Wenn die Sonne scheint, bin ich viel draußen und fahre Fahrrad. In meiner Heimat ist der Winter sehr kalt, manchmal minus 25 Grad. In Deutschland ist es im Winter wärmer, aber es regnet oft."
+  },
+  {
+   "thema": "Feste und Feiern",
+   "frage_de": "Wie feiern Sie Ihren Geburtstag?",
+   "stichpunkte": [
+    "Wo?",
+    "Gäste?",
+    "Essen?",
+    "Geschenke?"
+   ],
+   "beispiel": "Meinen Geburtstag feiere ich meistens zu Hause. Ich lade fünf oder sechs Freunde ein. Ich koche selbst, und eine Freundin bringt immer einen Kuchen mit. Ich bekomme gern Bücher oder Gutscheine als Geschenk. Letztes Jahr haben wir in einem Restaurant gefeiert, das war auch sehr schön."
+  },
+  {
+   "thema": "Medien und Kommunikation",
+   "frage_de": "Wie benutzen Sie Handy und Internet?",
+   "stichpunkte": [
+    "Wie lange pro Tag?",
+    "Nachrichten?",
+    "Videos / Serien?",
+    "Telefonieren?"
+   ],
+   "beispiel": "Ich benutze mein Handy jeden Tag ungefähr drei Stunden. Ich schreibe viele Nachrichten an Freunde und Familie. Abends sehe ich gern Serien im Internet, manchmal auf Deutsch. Mit meinen Eltern telefoniere ich per Video, so können wir uns sehen. Ich finde, das Handy ist praktisch, aber manchmal benutze ich es zu viel."
+  }
+ ],
+ "sprechen_teil3": [
+  {
+   "situation_de": "Ihr Freund Martin ist im Krankenhaus. Sie möchten ihn am Freitag zusammen besuchen. Die Besuchszeit ist von 14 bis 19 Uhr. Finden Sie einen Termin.",
+   "situation_ru": "Ваш друг Мартин лежит в больнице. Вы хотите вместе навестить его в пятницу. Часы посещения с 14 до 19. Найдите время, когда вы оба свободны.",
+   "beispiel_dialog": [
+    "A: Wann wollen wir Martin besuchen? Hast du am Freitag um 14 Uhr Zeit?",
+    "B: Nein, da kann ich leider nicht. Da bin ich noch bei der Arbeit. Geht es um 16 Uhr?",
+    "A: Um 16 Uhr habe ich einen Termin beim Zahnarzt. Wie wäre es mit 17 Uhr?",
+    "B: Um 17 Uhr gehe ich mit meinem Hund spazieren. Aber das kann ich auch später machen. 17 Uhr ist okay.",
+    "A: Super. Sollen wir etwas mitbringen?",
+    "B: Ja, vielleicht Obst und eine Zeitschrift. Ich kaufe das vorher.",
+    "A: Gut, dann treffen wir uns am Freitag um 17 Uhr vor dem Krankenhaus.",
+    "B: Prima, bis Freitag!"
+   ]
+  },
+  {
+   "situation_de": "Ihre Freundin Lisa macht am Samstagabend eine Party. Sie wollen ihr helfen und am Samstag zusammen Essen und Getränke einkaufen. Finden Sie eine Zeit.",
+   "situation_ru": "Ваша подруга Лиза в субботу вечером устраивает вечеринку. Вы хотите помочь ей и в субботу вместе купить еду и напитки. Найдите время.",
+   "beispiel_dialog": [
+    "A: Wann können wir für Lisas Party einkaufen? Vielleicht am Samstag um 9 Uhr?",
+    "B: Um 9 Uhr schlafe ich noch, weil ich am Freitag lange arbeite. Geht es um 11 Uhr?",
+    "A: Nein, um 11 Uhr habe ich Schwimmkurs. Und um 13 Uhr?",
+    "B: Da esse ich mit meinen Eltern zu Mittag. Was hältst du von 15 Uhr?",
+    "A: 15 Uhr passt mir gut. Fahren wir mit dem Auto?",
+    "B: Ja, die Getränke sind schwer. Ich hole dich ab.",
+    "A: Super. Ich schreibe heute eine Einkaufsliste.",
+    "B: Gut, dann bis Samstag um 15 Uhr!"
+   ]
+  },
+  {
+   "situation_de": "Sie möchten am Sonntag zusammen ins Kino gehen. Der Film läuft um 14, 17 und 20 Uhr. Finden Sie eine Zeit, die für beide passt.",
+   "situation_ru": "Вы хотите в воскресенье вместе сходить в кино. Фильм идёт в 14, 17 и 20 часов. Найдите сеанс, который подходит вам обоим.",
+   "beispiel_dialog": [
+    "A: Hast du am Sonntag Lust auf Kino? Der neue Krimi läuft um 14, 17 und 20 Uhr.",
+    "B: Gern! Aber um 14 Uhr kann ich nicht, da besuche ich meine Oma.",
+    "A: Und um 17 Uhr? Passt dir das?",
+    "B: Leider nicht, um 17 Uhr spiele ich Fußball. Wie wäre es mit 20 Uhr?",
+    "A: Hm, das ist ein bisschen spät, ich muss am Montag früh aufstehen. Aber okay, das geht.",
+    "B: Prima. Sollen wir vorher etwas essen?",
+    "A: Gute Idee! Treffen wir uns um 19 Uhr in der Pizzeria neben dem Kino?",
+    "B: Einverstanden. Also Sonntag, 19 Uhr, in der Pizzeria. Ich freue mich!"
+   ]
+  },
+  {
+   "situation_de": "Sie möchten am Donnerstag zusammen zwei Stunden für die Prüfung „Goethe-Zertifikat A2“ üben. Finden Sie einen Termin.",
+   "situation_ru": "Вы хотите в четверг вместе два часа потренироваться к экзамену Goethe-Zertifikat A2. Найдите время.",
+   "beispiel_dialog": [
+    "A: Wollen wir am Donnerstag zusammen für die Goethe-Prüfung lernen? Hast du am Vormittag Zeit?",
+    "B: Nein, am Vormittag arbeite ich bis 13 Uhr. Und du, kannst du um 14 Uhr?",
+    "A: Um 14 Uhr gehe ich mit meiner Tochter zum Kinderarzt. Das dauert bis 15 Uhr.",
+    "B: Dann vielleicht um 16 Uhr?",
+    "A: Ja, das passt mir. Wo treffen wir uns? In der Bibliothek?",
+    "B: Die Bibliothek ist am Donnerstag nur bis 17 Uhr offen. Komm doch zu mir nach Hause.",
+    "A: Okay, gern. Ich bringe den Modellsatz vom Goethe-Institut mit.",
+    "B: Super. Dann bis Donnerstag um 16 Uhr bei mir!"
+   ]
+  },
+  {
+   "situation_de": "Ihre Kollegin Frau Becker hat am Freitag ihren letzten Arbeitstag. Sie möchten am Mittwoch nach der Arbeit zusammen ein Geschenk für sie kaufen. Finden Sie eine Zeit.",
+   "situation_ru": "У вашей коллеги фрау Беккер в пятницу последний рабочий день. Вы хотите в среду после работы вместе купить ей подарок. Найдите время.",
+   "beispiel_dialog": [
+    "A: Wann kaufen wir das Geschenk für Frau Becker? Geht es am Mittwoch um 17 Uhr?",
+    "B: Tut mir leid, um 17 Uhr habe ich noch eine Besprechung. Hast du um 18 Uhr Zeit?",
+    "A: Nein, um 18 Uhr gehe ich zum Yoga. Aber um 19 Uhr bin ich fertig.",
+    "B: Die Geschäfte sind bis 20 Uhr geöffnet. Eine Stunde ist genug, oder?",
+    "A: Ja, das reicht. Was schenken wir ihr?",
+    "B: Sie arbeitet doch gern im Garten. Vielleicht Blumen und ein Buch über Gartenarbeit?",
+    "A: Gute Idee! Treffen wir uns vor dem Kaufhaus am Markt?",
+    "B: Einverstanden. Also Mittwoch um 19 Uhr vor dem Kaufhaus."
+   ]
+  },
+  {
+   "situation_de": "Sie möchten am Samstag zusammen Sport machen, zum Beispiel schwimmen oder joggen. Finden Sie eine Zeit.",
+   "situation_ru": "Вы хотите в субботу вместе заняться спортом, например поплавать или побегать. Найдите время, которое подходит обоим.",
+   "beispiel_dialog": [
+    "A: Wollen wir am Samstag zusammen schwimmen gehen? Um 8 Uhr ist das Schwimmbad noch leer.",
+    "B: Um 8 Uhr? Das ist mir zu früh! Und um 10 Uhr frühstücke ich mit meiner Familie.",
+    "A: Um 12 Uhr muss ich meine Wohnung putzen, meine Eltern kommen am Abend. Kannst du um 14 Uhr?",
+    "B: Ja, um 14 Uhr habe ich Zeit. Aber am Nachmittag ist das Schwimmbad sehr voll.",
+    "A: Stimmt. Dann gehen wir lieber im Park joggen.",
+    "B: Gute Idee, das Wetter soll schön werden.",
+    "A: Okay. Dann treffen wir uns um 14 Uhr am Eingang zum Stadtpark.",
+    "B: Perfekt, bis Samstag!"
+   ]
+  }
+ ],
+ "redemittel": [
+  {
+   "kategorie": "E-Mail: Anfang",
+   "deutsch": "Liebe Anna, / Lieber Tom,",
+   "russisch": "Дорогая Анна, / Дорогой Том, (неформально, на «du»)"
+  },
+  {
+   "kategorie": "E-Mail: Anfang",
+   "deutsch": "Hallo Max,",
+   "russisch": "Привет, Макс, (неформально)"
+  },
+  {
+   "kategorie": "E-Mail: Anfang",
+   "deutsch": "Lieber Herr Wagner, / Liebe Frau Schulz,",
+   "russisch": "Уважаемый господин Вагнер, / Уважаемая фрау Шульц, (полуформально: на «Sie», но тепло, знакомому человеку)"
+  },
+  {
+   "kategorie": "E-Mail: Anfang",
+   "deutsch": "Sehr geehrte Frau Keller,",
+   "russisch": "Уважаемая госпожа Келлер, (официально)"
+  },
+  {
+   "kategorie": "E-Mail: Anfang",
+   "deutsch": "Sehr geehrter Herr Braun,",
+   "russisch": "Уважаемый господин Браун, (официально)"
+  },
+  {
+   "kategorie": "E-Mail: Anfang",
+   "deutsch": "Sehr geehrte Damen und Herren,",
+   "russisch": "Уважаемые дамы и господа, (если имя адресата неизвестно)"
+  },
+  {
+   "kategorie": "E-Mail: Anfang",
+   "deutsch": "Vielen Dank für deine / Ihre E-Mail.",
+   "russisch": "Большое спасибо за твоё / Ваше письмо."
+  },
+  {
+   "kategorie": "E-Mail: Anfang",
+   "deutsch": "Wie geht es dir? Mir geht es gut.",
+   "russisch": "Как у тебя дела? У меня всё хорошо."
+  },
+  {
+   "kategorie": "E-Mail: Schluss",
+   "deutsch": "Liebe Grüße",
+   "russisch": "С тёплым приветом (другу, на «du»)"
+  },
+  {
+   "kategorie": "E-Mail: Schluss",
+   "deutsch": "Viele Grüße",
+   "russisch": "С приветом / Всего доброго (нейтрально, можно и на «Sie»)"
+  },
+  {
+   "kategorie": "E-Mail: Schluss",
+   "deutsch": "Mit freundlichen Grüßen",
+   "russisch": "С уважением (официально)"
+  },
+  {
+   "kategorie": "E-Mail: Schluss",
+   "deutsch": "Ich freue mich auf deine / Ihre Antwort.",
+   "russisch": "Жду твоего / Вашего ответа."
+  },
+  {
+   "kategorie": "E-Mail: Schluss",
+   "deutsch": "Bis bald!",
+   "russisch": "До скорого!"
+  },
+  {
+   "kategorie": "sich entschuldigen",
+   "deutsch": "Es tut mir leid, dass ich zu spät komme.",
+   "russisch": "Извини(те), что я опаздываю."
+  },
+  {
+   "kategorie": "sich entschuldigen",
+   "deutsch": "Entschuldige bitte, ich habe deine Nachricht zu spät gelesen.",
+   "russisch": "Извини, пожалуйста, я поздно прочитал(а) твоё сообщение."
+  },
+  {
+   "kategorie": "sich entschuldigen",
+   "deutsch": "Entschuldigen Sie bitte, dass ich erst jetzt antworte.",
+   "russisch": "Извините, пожалуйста, что отвечаю только сейчас."
+  },
+  {
+   "kategorie": "sich entschuldigen",
+   "deutsch": "Mein Zug hat Verspätung.",
+   "russisch": "Мой поезд опаздывает."
+  },
+  {
+   "kategorie": "einladen",
+   "deutsch": "Hast du Lust, am Samstag ins Kino zu gehen?",
+   "russisch": "Хочешь в субботу сходить в кино?"
+  },
+  {
+   "kategorie": "einladen",
+   "deutsch": "Ich möchte dich zu meiner Geburtstagsparty einladen.",
+   "russisch": "Я хочу пригласить тебя на свой день рождения."
+  },
+  {
+   "kategorie": "einladen",
+   "deutsch": "Kommst du mit?",
+   "russisch": "Пойдёшь со мной?"
+  },
+  {
+   "kategorie": "einladen",
+   "deutsch": "Ich lade Sie herzlich zu unserem Sommerfest ein.",
+   "russisch": "Сердечно приглашаю Вас на наш летний праздник."
+  },
+  {
+   "kategorie": "zusagen / absagen",
+   "deutsch": "Vielen Dank für die Einladung!",
+   "russisch": "Большое спасибо за приглашение!"
+  },
+  {
+   "kategorie": "zusagen / absagen",
+   "deutsch": "Ich komme gern.",
+   "russisch": "Я с удовольствием приду."
+  },
+  {
+   "kategorie": "zusagen / absagen",
+   "deutsch": "Darf ich meinen Mann / meine Frau mitbringen?",
+   "russisch": "Можно мне прийти с мужем / с женой? (если придёте не один, как в Modellsatz)"
+  },
+  {
+   "kategorie": "zusagen / absagen",
+   "deutsch": "Tolle Idee, ich bin dabei!",
+   "russisch": "Отличная идея, я с вами!"
+  },
+  {
+   "kategorie": "zusagen / absagen",
+   "deutsch": "Leider kann ich nicht kommen, weil ich krank bin.",
+   "russisch": "К сожалению, я не смогу прийти, потому что я болен (больна)."
+  },
+  {
+   "kategorie": "zusagen / absagen",
+   "deutsch": "Ich muss leider absagen.",
+   "russisch": "К сожалению, я вынужден(а) отказаться."
+  },
+  {
+   "kategorie": "zusagen / absagen",
+   "deutsch": "Schade, vielleicht klappt es nächstes Mal.",
+   "russisch": "Жаль, может быть, получится в следующий раз."
+  },
+  {
+   "kategorie": "um etwas bitten",
+   "deutsch": "Kannst du mir bitte helfen?",
+   "russisch": "Ты можешь мне, пожалуйста, помочь?"
+  },
+  {
+   "kategorie": "um etwas bitten",
+   "deutsch": "Können Sie mir bitte sagen, wie ich zu Ihnen komme?",
+   "russisch": "Скажите, пожалуйста, как к Вам добраться?"
+  },
+  {
+   "kategorie": "um etwas bitten",
+   "deutsch": "Können Sie mir bitte den Weg beschreiben?",
+   "russisch": "Не могли бы Вы объяснить мне дорогу?"
+  },
+  {
+   "kategorie": "um etwas bitten",
+   "deutsch": "Könnten Sie mir bitte die Informationen schicken?",
+   "russisch": "Не могли бы Вы прислать мне информацию?"
+  },
+  {
+   "kategorie": "um etwas bitten",
+   "deutsch": "Ich hätte gern einen Termin.",
+   "russisch": "Я хотел(а) бы записаться на приём."
+  },
+  {
+   "kategorie": "um etwas bitten",
+   "deutsch": "Kannst du bitte Getränke mitbringen?",
+   "russisch": "Можешь, пожалуйста, принести напитки?"
+  },
+  {
+   "kategorie": "einen Vorschlag machen",
+   "deutsch": "Wie wäre es mit Freitag um 18 Uhr?",
+   "russisch": "Как насчёт пятницы в 18:00?"
+  },
+  {
+   "kategorie": "einen Vorschlag machen",
+   "deutsch": "Hast du am Montag um 10 Uhr Zeit?",
+   "russisch": "У тебя есть время в понедельник в 10 часов?"
+  },
+  {
+   "kategorie": "einen Vorschlag machen",
+   "deutsch": "Können wir uns um 17 Uhr am Bahnhof treffen?",
+   "russisch": "Можем встретиться в 17:00 у вокзала?"
+  },
+  {
+   "kategorie": "einen Vorschlag machen",
+   "deutsch": "Treffen wir uns um sieben vor dem Kino?",
+   "russisch": "Встретимся в семь у кинотеатра?"
+  },
+  {
+   "kategorie": "einen Vorschlag machen",
+   "deutsch": "Wollen wir zusammen einkaufen gehen?",
+   "russisch": "Давай вместе сходим за покупками?"
+  },
+  {
+   "kategorie": "einen Vorschlag machen",
+   "deutsch": "Was hältst du von einem Picknick im Park?",
+   "russisch": "Как тебе идея устроить пикник в парке?"
+  },
+  {
+   "kategorie": "einen Vorschlag machen",
+   "deutsch": "Wir können auch später gehen.",
+   "russisch": "Мы можем пойти и позже."
+  },
+  {
+   "kategorie": "zustimmen / ablehnen",
+   "deutsch": "Das passt mir gut.",
+   "russisch": "Мне это удобно."
+  },
+  {
+   "kategorie": "zustimmen / ablehnen",
+   "deutsch": "Einverstanden!",
+   "russisch": "Договорились! / Согласен (согласна)!"
+  },
+  {
+   "kategorie": "zustimmen / ablehnen",
+   "deutsch": "Gute Idee!",
+   "russisch": "Хорошая идея!"
+  },
+  {
+   "kategorie": "zustimmen / ablehnen",
+   "deutsch": "Da kann ich leider nicht, da muss ich arbeiten.",
+   "russisch": "В это время я, к сожалению, не могу: мне нужно работать."
+  },
+  {
+   "kategorie": "zustimmen / ablehnen",
+   "deutsch": "Das geht leider nicht.",
+   "russisch": "К сожалению, так не получится."
+  },
+  {
+   "kategorie": "zustimmen / ablehnen",
+   "deutsch": "15 Uhr passt mir nicht, aber um 17 Uhr geht es.",
+   "russisch": "В 15 мне неудобно, а в 17 получится."
+  },
+  {
+   "kategorie": "zustimmen / ablehnen",
+   "deutsch": "Gut, dann treffen wir uns am Freitag um 18 Uhr.",
+   "russisch": "Хорошо, тогда встречаемся в пятницу в 18:00. (подтвердить договорённость в конце)"
+  },
+  {
+   "kategorie": "nachfragen",
+   "deutsch": "Wie bitte?",
+   "russisch": "Что, простите? (если не расслышали)"
+  },
+  {
+   "kategorie": "nachfragen",
+   "deutsch": "Können Sie das bitte wiederholen?",
+   "russisch": "Не могли бы Вы, пожалуйста, повторить?"
+  },
+  {
+   "kategorie": "nachfragen",
+   "deutsch": "Kannst du bitte langsamer sprechen?",
+   "russisch": "Можешь, пожалуйста, говорить помедленнее?"
+  },
+  {
+   "kategorie": "nachfragen",
+   "deutsch": "Was bedeutet das Wort „Besprechung“?",
+   "russisch": "Что значит слово «Besprechung»?"
+  },
+  {
+   "kategorie": "nachfragen",
+   "deutsch": "Meinst du Samstag oder Sonntag?",
+   "russisch": "Ты имеешь в виду субботу или воскресенье?"
+  },
+  {
+   "kategorie": "nachfragen",
+   "deutsch": "Wie schreibt man das?",
+   "russisch": "Как это пишется?"
+  },
+  {
+   "kategorie": "über Vergangenes sprechen",
+   "deutsch": "Letztes Wochenende habe ich meine Eltern besucht.",
+   "russisch": "В прошлые выходные я навестил(а) родителей."
+  },
+  {
+   "kategorie": "über Vergangenes sprechen",
+   "deutsch": "Gestern bin ich mit dem Fahrrad zur Arbeit gefahren.",
+   "russisch": "Вчера я ездил(а) на работу на велосипеде."
+  },
+  {
+   "kategorie": "über Vergangenes sprechen",
+   "deutsch": "Im Urlaub war ich in Österreich.",
+   "russisch": "В отпуске я был(а) в Австрии."
+  },
+  {
+   "kategorie": "über Vergangenes sprechen",
+   "deutsch": "Früher hatte ich keine Zeit für Sport.",
+   "russisch": "Раньше у меня не было времени на спорт."
+  },
+  {
+   "kategorie": "über Vergangenes sprechen",
+   "deutsch": "Vor einem Jahr habe ich angefangen, Deutsch zu lernen.",
+   "russisch": "Год назад я начал(а) учить немецкий."
+  },
+  {
+   "kategorie": "Meinung sagen",
+   "deutsch": "Ich finde, dass Deutsch eine schöne Sprache ist.",
+   "russisch": "Я считаю, что немецкий — красивый язык."
+  },
+  {
+   "kategorie": "Meinung sagen",
+   "deutsch": "Meiner Meinung nach ist das zu teuer.",
+   "russisch": "По-моему, это слишком дорого."
+  },
+  {
+   "kategorie": "Meinung sagen",
+   "deutsch": "Ich glaube, das ist eine gute Idee.",
+   "russisch": "Я думаю, это хорошая идея."
+  },
+  {
+   "kategorie": "Meinung sagen",
+   "deutsch": "Mir gefällt das (nicht) so gut.",
+   "russisch": "Мне это (не) очень нравится."
+  },
+  {
+   "kategorie": "Meinung sagen",
+   "deutsch": "Für mich ist Sport wichtig, weil ich viel im Büro sitze.",
+   "russisch": "Для меня важен спорт, потому что я много сижу в офисе."
+  },
+  {
+   "kategorie": "sich bedanken",
+   "deutsch": "Vielen Dank für deine Hilfe!",
+   "russisch": "Большое спасибо за помощь!"
+  },
+  {
+   "kategorie": "sich bedanken",
+   "deutsch": "Das ist sehr nett von Ihnen.",
+   "russisch": "Это очень любезно с Вашей стороны."
+  },
+  {
+   "kategorie": "Gründe nennen",
+   "deutsch": "Ich komme später, weil mein Bus Verspätung hat.",
+   "russisch": "Я приду позже, потому что мой автобус опаздывает. (после weil спрягаемый глагол стоит в конце)"
+  },
+  {
+   "kategorie": "Gründe nennen",
+   "deutsch": "Ich habe heute keine Zeit, deshalb komme ich morgen.",
+   "russisch": "Сегодня у меня нет времени, поэтому я приду завтра. (сразу после deshalb идёт глагол, подлежащее после него)"
+  }
+ ]
+}

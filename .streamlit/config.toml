@@ -1,0 +1,14 @@
+# Тема оформления Streamlit: цвета и шрифт всего приложения
+[theme]
+base = "light"
+primaryColor = "#7C3AED"
+backgroundColor = "#F6F3FF"
+secondaryBackgroundColor = "#ECE6FF"
+textColor = "#1E1537"
+font = "sans serif"
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false

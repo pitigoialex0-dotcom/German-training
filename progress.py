@@ -37,13 +37,30 @@ MAX_BOX = 5
 # С какой коробки слово считаем выученным
 LEARNED_BOX = 4
 
-# Названия режимов (используются в ключах карточек)
-MODES = ["de_ru", "ru_de", "article"]
+# Названия режимов (используются в ключах карточек):
+# de_ru / ru_de — карточки, article — артикли, perfekt — формы Perfekt, diktat — диктант
+MODES = ["de_ru", "ru_de", "article", "perfekt", "diktat"]
+
+# Очки опыта (XP)
+XP_CORRECT = 10        # правильный ответ с первой попытки
+XP_RETRY = 5           # правильный ответ со второй попытки
+XP_COMBO_BONUS = 5     # бонус за каждые 5 правильных ответов подряд
+XP_LESSON_DONE = 10    # бонус за пройденный урок
+XP_PERFECT = 10        # бонус за урок без ошибок
+
+DAILY_XP_GOAL = 50     # цель на день по умолчанию (меняется в настройках)
 
 
 def new_progress():
     """Пустой прогресс для первого запуска."""
-    return {"cards": {}, "days": {}}
+    return {
+        "cards": {},       # карточки Лейтнера
+        "days": {},        # статистика по дням
+        "xp": 0,           # всего очков опыта
+        "stations": {},    # пройденные станции пути: звёзды и лучший результат
+        "exam": {"date": "", "schreiben_done": [], "sprechen_done": 0},
+        "settings": {"daily_xp": DAILY_XP_GOAL, "sounds": True},
+    }
 
 
 def load_progress(path=PROGRESS_FILE):
@@ -58,8 +75,12 @@ def load_progress(path=PROGRESS_FILE):
         os.replace(path, path + ".broken")
         return new_progress()
     # setdefault добавит ключ, только если его ещё нет (на случай старого формата файла)
-    progress.setdefault("cards", {})
-    progress.setdefault("days", {})
+    for key, value in new_progress().items():
+        progress.setdefault(key, value)
+    for key, value in new_progress()["exam"].items():
+        progress["exam"].setdefault(key, value)
+    for key, value in new_progress()["settings"].items():
+        progress["settings"].setdefault(key, value)
     return progress
 
 
@@ -122,7 +143,7 @@ def record_answer(progress, word, mode, is_correct, article_mistake=False, today
     card["last_seen"] = today.isoformat()
 
     # Статистика по дням — для серии дней и дневной цели
-    day = progress["days"].setdefault(today.isoformat(), {"answered": 0, "correct": 0})
+    day = get_day(progress, today)
     day["answered"] += 1
     if is_correct:
         day["correct"] += 1
@@ -263,3 +284,91 @@ def reset_progress(path=PROGRESS_FILE):
     if os.path.exists(path):
         os.remove(path)
 
+
+
+# ---------------------------------------------------------------
+# Дни, очки опыта (XP) и уровни
+# ---------------------------------------------------------------
+
+def get_day(progress, day):
+    """Статистика одного дня (создаётся, если её ещё нет)."""
+    stats = progress["days"].setdefault(day.isoformat(), {})
+    stats.setdefault("answered", 0)
+    stats.setdefault("correct", 0)
+    stats.setdefault("xp", 0)
+    return stats
+
+
+def add_xp(progress, amount, today=None):
+    """Начисляет очки опыта: в общий счёт и в статистику дня."""
+    today = today or date.today()
+    progress["xp"] += amount
+    get_day(progress, today)["xp"] += amount
+
+
+def xp_on(progress, day):
+    """Сколько XP заработано в указанный день."""
+    return progress["days"].get(day.isoformat(), {}).get("xp", 0)
+
+
+def last_days_xp(progress, count=7, today=None):
+    """XP за последние count дней: список пар (дата, XP), от старых к новым."""
+    today = today or date.today()
+    result = []
+    for days_ago in range(count - 1, -1, -1):
+        day = today - timedelta(days=days_ago)
+        result.append((day, xp_on(progress, day)))
+    return result
+
+
+def level_start(level):
+    """Сколько XP нужно для уровня: 1 → 0, 2 → 100, 3 → 300, 4 → 600, 5 → 1000..."""
+    return 50 * level * (level - 1)
+
+
+def level_info(xp):
+    """Возвращает (уровень, XP внутри уровня, XP нужно на весь уровень)."""
+    level = 1
+    while xp >= level_start(level + 1):
+        level += 1
+    inside = xp - level_start(level)
+    needed = level_start(level + 1) - level_start(level)
+    return level, inside, needed
+
+
+# ---------------------------------------------------------------
+# Станции пути
+# ---------------------------------------------------------------
+
+def stars_for(accuracy):
+    """Звёзды за урок: 60% → 1, 80% → 2, 100% → 3. Меньше 60% — станция не пройдена."""
+    if accuracy >= 1.0:
+        return 3
+    if accuracy >= 0.8:
+        return 2
+    if accuracy >= 0.6:
+        return 1
+    return 0
+
+
+def save_station_result(progress, station_id, accuracy, today=None):
+    """Запоминает лучший результат станции. Возвращает число звёзд за эту попытку."""
+    today = today or date.today()
+    stars = stars_for(accuracy)
+    old = progress["stations"].get(station_id, {"stars": 0, "best": 0.0})
+    if accuracy >= old["best"]:
+        progress["stations"][station_id] = {"stars": stars, "best": round(accuracy, 3), "date": today.isoformat()}
+    return stars
+
+
+def station_stars(progress, station_id):
+    """Сколько звёзд у станции (0 — не пройдена)."""
+    return progress["stations"].get(station_id, {}).get("stars", 0)
+
+
+def total_stars(progress):
+    """Сумма звёзд по всем станциям."""
+    total = 0
+    for result in progress["stations"].values():
+        total += result["stars"]
+    return total
