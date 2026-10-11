@@ -29,7 +29,8 @@ def render(words, progress_data, words_file):
         with col_search:
             search = st.text_input("🔍 Поиск (по-немецки, по-русски или по-английски)")
         with col_topic:
-            topics = st.multiselect("Темы", themen.ordered_topics(words), placeholder="Все темы")
+            topics = ui.remembered_multiselect("Темы", themen.ordered_topics(words), "saved-dictionary-topics",
+                                               placeholder="Все темы")
 
         rows = []
         for word in vocab.filter_by_topics(words, topics) if topics else words:
@@ -85,5 +86,8 @@ def add_form(words, words_file):
         elif vocab.make_key(new_word) in existing:
             st.error(f"Слово «{vocab.make_key(new_word)}» уже есть в словаре.")
         else:
-            vocab.add_word(words_file, new_word)
-            st.success(f"Добавлено: {vocab.make_key(new_word)} — {new_word['russian']}")
+            try:
+                vocab.add_word(words_file, new_word)
+                st.success(f"Добавлено: {vocab.make_key(new_word)} — {new_word['russian']}")
+            except ValueError as error:   # в файле строка с лишними ячейками
+                st.error(str(error))

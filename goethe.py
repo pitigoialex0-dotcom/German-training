@@ -79,7 +79,7 @@ def readiness(words, progress_data, content):
     done = len(progress_data["exam"]["schreiben_done"])
     schreiben = min(1, done / len(tasks)) if tasks else 0
 
-    sprechen = min(1, progress_data["exam"]["sprechen_done"] / SPRECHEN_TARGET)
+    sprechen = min(1, len(progress_data["exam"]["sprechen_cards"]) / SPRECHEN_TARGET)  # разные карточки
 
     correct, total = progress.accuracy(words, progress_data, ["diktat"])
     hoeren = (correct / total if total else 0) * min(1, total / DIKTAT_TARGET)

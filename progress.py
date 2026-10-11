@@ -58,7 +58,7 @@ def new_progress():
         "days": {},        # статистика по дням
         "xp": 0,           # всего очков опыта
         "stations": {},    # пройденные станции пути: звёзды и лучший результат
-        "exam": {"date": "", "schreiben_done": [], "sprechen_done": 0},
+        "exam": {"date": "", "schreiben_done": [], "sprechen_done": 0, "sprechen_cards": []},
         "settings": {"daily_xp": DAILY_XP_GOAL, "sounds": True},
     }
 
@@ -128,18 +128,23 @@ def record_answer(progress, word, mode, is_correct, article_mistake=False, today
     today = today or date.today()
     card = progress["cards"].setdefault(card_id(word, mode), new_card(today))
     old_box = card["box"]
+    was_due = is_due(card, today)
 
     if is_correct:
-        card["box"] = min(card["box"] + 1, MAX_BOX)
         card["correct"] += 1
+        # В следующую коробку — только если слово было пора повторять. Иначе можно было бы
+        # «выучить» слово за один вечер, просто пройдя урок несколько раз подряд.
+        if was_due:
+            card["box"] = min(card["box"] + 1, MAX_BOX)
+            card["next_review"] = (today + timedelta(days=INTERVALS[card["box"]])).isoformat()
     else:
-        card["box"] = 1
         card["wrong"] += 1
+        card["box"] = 1
+        card["next_review"] = today.isoformat()   # ошибка — повторим ещё сегодня
 
     if article_mistake:
         card["article_wrong"] += 1
 
-    card["next_review"] = (today + timedelta(days=INTERVALS[card["box"]])).isoformat()
     card["last_seen"] = today.isoformat()
 
     # Статистика по дням — для серии дней и дневной цели
@@ -250,7 +255,12 @@ def box_counts(words, progress, mode):
     """Сколько карточек в каждой коробке. Ещё не виденные считаем отдельно как «новые»."""
     counts = {"новые": 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0}
     for word in words:
+        # Считаем только карточки, которые у слова вообще бывают
         if mode == "article" and word["article"] == "":
+            continue
+        if mode == "perfekt" and word.get("perfekt", "") == "":
+            continue
+        if mode == "diktat" and word.get("example", "") == "":
             continue
         if card_id(word, mode) not in progress["cards"]:
             counts["новые"] += 1
@@ -351,10 +361,11 @@ def stars_for(accuracy):
     return 0
 
 
-def save_station_result(progress, station_id, accuracy, today=None):
-    """Запоминает лучший результат станции. Возвращает число звёзд за эту попытку."""
+def save_station_result(progress, station_id, accuracy, today=None, min_pass=0.0):
+    """Запоминает лучший результат станции. Возвращает число звёзд за эту попытку.
+    min_pass — порог прохождения (у чекпоинта 0.8): ниже него звёзд нет."""
     today = today or date.today()
-    stars = stars_for(accuracy)
+    stars = stars_for(accuracy) if accuracy >= min_pass else 0
     old = progress["stations"].get(station_id, {"stars": 0, "best": 0.0})
     if accuracy >= old["best"]:
         progress["stations"][station_id] = {"stars": stars, "best": round(accuracy, 3), "date": today.isoformat()}

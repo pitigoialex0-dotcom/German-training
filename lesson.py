@@ -16,11 +16,14 @@ lesson.py — урок в стиле Duolingo: очередь заданий, п
 
 import random
 
+import checker
 import progress
 import vocab
 
 LESSON_SIZE = 15   # сколько заданий в обычной тренировке
 MAX_TRIES = 3      # сколько раз задание может вернуться после ошибки
+STATION_PASS = 0.6     # сколько нужно, чтобы пройти станцию (как в path.py)
+CHECKPOINT_PASS = 0.8  # сколько нужно для чекпоинта
 
 # Все виды заданий и их заголовки
 TASK_TITLES = {
@@ -47,10 +50,15 @@ def make_choice_task(word, pool):
     """Задание с выбором из 4 вариантов перевода. Варианты выбираем сразу,
     чтобы они не менялись при каждом перезапуске страницы."""
     task = make_task("choice", word)
+    mine = set(checker.normalize(v) for v in checker.split_variants(word["russian"]))
     wrong = []
     for other in pool:
-        if other["russian"] != word["russian"] and other["russian"] not in wrong:
-            wrong.append(other["russian"])
+        theirs = set(checker.normalize(v) for v in checker.split_variants(other["russian"]))
+        # Пропускаем слова с общим переводом (das Fieber и die Temperatur — «температура»):
+        # иначе правильный по смыслу вариант засчитался бы как ошибка
+        if mine & theirs or other["russian"] in wrong:
+            continue
+        wrong.append(other["russian"])
     options = random.sample(wrong, min(3, len(wrong))) + [word["russian"]]
     random.shuffle(options)
     task["options"] = options
@@ -177,9 +185,15 @@ def finish(lesson, progress_data):
     progress.add_xp(progress_data, bonus)
     lesson["xp"] += bonus
     lesson["bonus"] = bonus
-    lesson["stars"] = progress.stars_for(accuracy(lesson))
+
+    # У чекпоинта порог 80%: ниже него звёзд нет, станция не пройдена
+    need = 0.0
+    if lesson["station"] is not None and lesson["station"].endswith("|checkpoint"):
+        need = CHECKPOINT_PASS
+    lesson["stars"] = progress.stars_for(accuracy(lesson)) if accuracy(lesson) >= need else 0
+    lesson["passed"] = accuracy(lesson) >= max(need, STATION_PASS)
     if lesson["station"] is not None:
-        progress.save_station_result(progress_data, lesson["station"], accuracy(lesson))
+        progress.save_station_result(progress_data, lesson["station"], accuracy(lesson), min_pass=need)
     lesson["saved"] = True
 
 

@@ -86,7 +86,7 @@ def side_panel(units, current, words, progress_data):
             common.start_lesson({"type": "station", "id": current["id"]}, words, progress_data)
 
     ui.show('<div class="card"><h3>Как устроен путь</h3>'
-            '<div>📘 <b>Слова</b> — по 7 новых слов: знакомство → выбор → написать самому</div>'
+            '<div>📘 <b>Слова</b> — по 6–8 новых слов: знакомство → выбор → написать самому</div>'
             '<div>🎯 <b>Артикли</b> — der / die / das для существительных темы</div>'
             '<div>⏪ <b>Perfekt</b> — прошедшее время глаголов (нужно для Schreiben и Sprechen)</div>'
             '<div>🏆 <b>Чекпоинт</b> — смешанный тест по теме, нужно 80%</div>'

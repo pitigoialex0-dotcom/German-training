@@ -18,8 +18,10 @@ MODULE_COLORS = ["#3B82F6", "#14B8A6", "#EC4899", "#F59E0B", "#8B5CF6"]
 XP_SCHREIBEN = 20
 XP_SPRECHEN = 5
 
-GREETINGS = ["liebe", "lieber", "hallo", "hi", "sehr geehrte", "sehr geehrter", "guten tag"]
-CLOSINGS = ["grüße", "gruesse", "gruß", "gruss", "bis bald", "bis dann", "tschüss", "tschuess", "dein", "deine"]
+# Регулярные выражения (regex) — шаблоны для поиска в тексте. \b — граница слова,
+# поэтому «hi» не найдётся внутри «hier»
+GREETING_PATTERN = r"^(liebe[rs]?|hallo|hi|sehr geehrte[rs]?|guten tag)\b"
+CLOSING_PATTERN = r"(gr(ü|ue)(ß|ss)e?|gru(ß|ss)|bis bald|bis dann|tsch(ü|ue)ss|^deine?\s+\w+$)"
 
 
 def render(words, progress_data):
@@ -136,7 +138,7 @@ def schreiben_tab(content, progress_data):
 
     left, right = st.columns([1.4, 1], gap="large")
     with left:
-        number = st.selectbox("Задание", range(len(tasks)), format_func=label)
+        number = st.selectbox("Задание", range(len(tasks)), format_func=label, key="schreiben-task")
         task = tasks[number]
         points = "".join(f"<li>{ui.esc(point)}</li>" for point in task["punkte"])
         ui.show(f'<div class="card card-accent" style="--c:#EC4899">'
@@ -147,11 +149,14 @@ def schreiben_tab(content, progress_data):
                             placeholder="Liebe …,\n\n…\n\nViele Grüße\n…")
 
     with right:
-        word_count = len(re.findall(r"[A-Za-zÄÖÜäöüß]+", text))
-        lower = text.lower()
+        # Слово — всё, где есть буква или цифра: «16», «E-Mail» и «Gleis» считаются по одному
+        word_count = len([token for token in text.split() if re.search(r"[0-9A-Za-zÄÖÜäöüß]", token)])
+        lines = [line.strip().lower() for line in text.splitlines() if line.strip()]
         in_range = task["min_words"] <= word_count <= task["max_words"]
-        has_greeting = any(lower.strip().startswith(g) or ("\n" + g) in lower for g in GREETINGS)
-        has_closing = any(c in lower for c in CLOSINGS)
+        # Обращение — в первой строке, завершение — в последних строках письма
+        has_greeting = bool(lines) and re.match(GREETING_PATTERN, lines[0]) is not None
+        tail = "\n".join(lines[-3:])
+        has_closing = re.search(CLOSING_PATTERN, tail, flags=re.MULTILINE) is not None
         checks = [
             (in_range, f"Слов: {word_count} (нужно {task['min_words']}–{task['max_words']})"),
             (has_greeting, "Есть обращение (Liebe/Lieber/Hallo/Sehr geehrte…)"),
@@ -191,15 +196,27 @@ def schreiben_tab(content, progress_data):
 # Sprechen
 # ---------------------------------------------------------------
 
-def sprechen_done(progress_data):
-    """Отмечает проработанную карточку устной части."""
+def sprechen_done(progress_data, card_id):
+    """Отмечает проработанную карточку устной части. XP — только за новую карточку,
+    иначе можно было бы нажимать одну и ту же кнопку и «накручивать» готовность."""
+    done = progress_data["exam"]["sprechen_cards"]
     progress_data["exam"]["sprechen_done"] += 1
-    progress.add_xp(progress_data, XP_SPRECHEN)
+    if card_id not in done:
+        done.append(card_id)
+        progress.add_xp(progress_data, XP_SPRECHEN)
     progress.save_progress(progress_data)
 
 
+def sprechen_button(progress_data, card_id, key):
+    """Кнопка «Проговорил» или отметка, что карточка уже проработана."""
+    if card_id in progress_data["exam"]["sprechen_cards"]:
+        ui.show(ui.result_banner(True, "Карточка уже проработана ✅", "Можно повторить ещё раз — это полезно!"))
+        return False
+    return st.button(f"✅ Проговорил (+{XP_SPRECHEN} XP)", key=key, type="primary")
+
+
 def sprechen_tab(content, progress_data):
-    ui.show(f'<div class="muted">Проработано карточек: <b>{progress_data["exam"]["sprechen_done"]}</b>. '
+    ui.show(f'<div class="muted">Проработано разных карточек: <b>{len(progress_data["exam"]["sprechen_cards"])}</b>. '
             f'Говори вслух! Сначала ответь сам, потом открой образец и послушай его.</div>')
     teil1, teil2, teil3 = st.tabs(["Teil 1 · вопросы по карточкам", "Teil 2 · о себе", "Teil 3 · договориться"])
 
@@ -229,8 +246,9 @@ def sprechen_tab(content, progress_data):
                     ui.show(f'<div class="word-info"><div><b>Frage:</b> {ui.esc(card["frage"])}</div>'
                             f'<div><b>Antwort:</b> {ui.esc(card["antwort"])}</div></div>')
                     ui.speak_button(card["frage"] + " " + card["antwort"], "🔊 Послушать")
-                    if st.button(f"✅ Проговорил (+{XP_SPRECHEN} XP)", key="sprechen1-done", type="primary"):
-                        sprechen_done(progress_data)
+                    card_id = f'teil1-{st.session_state["sprechen1"]}'
+                    if sprechen_button(progress_data, card_id, "sprechen1-done"):
+                        sprechen_done(progress_data, card_id)
                         st.session_state["sprechen1"] = random.randrange(len(cards))
                         st.rerun()
 
@@ -251,8 +269,8 @@ def sprechen_tab(content, progress_data):
                 if st.toggle("👀 Показать образец", key=f"sprechen2-show-{number}"):
                     ui.show(f'<div class="word-info"><div class="ex">{ui.esc(card["beispiel"])}</div></div>')
                     ui.speak_button(card["beispiel"], "🔊 Послушать")
-                    if st.button(f"✅ Проговорил (+{XP_SPRECHEN} XP)", key=f"sprechen2-done-{number}", type="primary"):
-                        sprechen_done(progress_data)
+                    if sprechen_button(progress_data, f"teil2-{number}", f"sprechen2-done-{number}"):
+                        sprechen_done(progress_data, f"teil2-{number}")
                         st.toast("Отлично! +5 XP")
                         st.rerun()
 
@@ -274,8 +292,8 @@ def sprechen_tab(content, progress_data):
                     ui.show(f'<div class="word-info">{lines}</div>')
                     spoken = " ".join(re.sub(r"^[AB]:\s*", "", line) for line in card["beispiel_dialog"])
                     ui.speak_button(spoken, "🔊 Послушать диалог")
-                    if st.button(f"✅ Проговорил (+{XP_SPRECHEN} XP)", key=f"sprechen3-done-{number}", type="primary"):
-                        sprechen_done(progress_data)
+                    if sprechen_button(progress_data, f"teil3-{number}", f"sprechen3-done-{number}"):
+                        sprechen_done(progress_data, f"teil3-{number}")
                         st.toast("Отлично! +5 XP")
                         st.rerun()
 
@@ -294,7 +312,8 @@ def hoeren_tab(words, progress_data):
                 f'<div>Браузер читает предложение по-немецки, ты пишешь его. Ошибки подсвечиваются по словам.</div>'
                 f'<div class="muted" style="margin-top:6px">Диктантов: <b>{total}</b> · точность: <b>{accuracy}</b></div></div>')
         topic_names = themen.ordered_topics(words)
-        topics = st.multiselect("Темы для диктанта", topic_names, placeholder="Все темы", key="hoeren-topics")
+        topics = ui.remembered_multiselect("Темы для диктанта", topic_names, "saved-hoeren-topics",
+                                           placeholder="Все темы")
         if st.button("▶ Начать диктант", type="primary", key="hoeren-start"):
             common.start_lesson({"type": "practice", "kind": "diktat", "topics": topics}, words, progress_data)
     with right:

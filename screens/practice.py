@@ -41,10 +41,11 @@ def render(words, progress_data):
     col_topics, col_lessons = st.columns([2, 1])
     with col_topics:
         topic_names = themen.ordered_topics(words)
-        topics = st.multiselect("Темы", topic_names, placeholder="Все темы",
-                                format_func=lambda name: f'{themen.info(name)["emoji"]} {name}')
+        topics = ui.remembered_multiselect("Темы", topic_names, "saved-practice-topics", placeholder="Все темы",
+                                           format_func=lambda name: f'{themen.info(name)["emoji"]} {name}')
     with col_lessons:
-        lessons = st.multiselect("Lektion (Menschen)", vocab.get_lessons(words), placeholder="Все уроки")
+        lessons = ui.remembered_multiselect("Lektion (Menschen)", vocab.get_lessons(words), "saved-practice-lessons",
+                                            placeholder="Все уроки")
     selected = vocab.filter_by_lessons(vocab.filter_by_topics(words, topics), lessons)
     st.caption(f"Выбрано слов: {len(selected)}")
 

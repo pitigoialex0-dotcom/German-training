@@ -188,24 +188,34 @@ def play_sound(ok, nonce):
 
 def keyboard_shortcuts():
     """Горячие клавиши в уроке: 1–4 нажимают варианты ответа, 1–3 — der/die/das.
-    Обработчик ставится один раз и при каждом нажатии ищет кнопки на странице заново."""
+    При каждом новом уроке обработчик ставится заново и при нажатии ищет кнопки на странице."""
     components.html(
         """<script>
-        const doc = window.parent.document;
-        if (!window.parent.__deutschKeys) {
-            window.parent.__deutschKeys = true;
-            doc.addEventListener("keydown", function(e) {
-                const tag = (e.target.tagName || "").toLowerCase();
-                if (tag === "input" || tag === "textarea") { return; }
-                const map = {"1": ["opt-1", "art-der"], "2": ["opt-2", "art-die"], "3": ["opt-3", "art-das"], "4": ["opt-4"]};
-                const names = map[e.key];
-                if (!names) { return; }
-                for (const name of names) {
-                    const btn = doc.querySelector(".st-key-" + name + " button");
-                    if (btn) { btn.click(); return; }
-                }
-            });
-        }
+        // Старый обработчик снимаем: он остался от прошлого урока и уже не работает
+        const w = window.parent;
+        const doc = w.document;
+        if (w.__deutschKeys) { doc.removeEventListener("keydown", w.__deutschKeys); }
+        w.__deutschKeys = function(e) {
+            const tag = (e.target.tagName || "").toLowerCase();
+            if (tag === "input" || tag === "textarea") { return; }
+            const map = {"1": ["opt-1", "art-der"], "2": ["opt-2", "art-die"], "3": ["opt-3", "art-das"], "4": ["opt-4"]};
+            const names = map[e.key];
+            if (!names) { return; }
+            for (const name of names) {
+                const btn = doc.querySelector(".st-key-" + name + " button");
+                if (btn) { btn.click(); return; }
+            }
+        };
+        doc.addEventListener("keydown", w.__deutschKeys);
         </script>""",
         height=0,
     )
+
+
+def remembered_multiselect(label, options, memory_key, **kwargs):
+    """Мультивыбор, который помнит выбор, даже если на время урока его не было на экране.
+    Streamlit забывает значение виджета, который не показывался, поэтому храним копию сами."""
+    saved = [option for option in st.session_state.get(memory_key, []) if option in options]
+    value = st.multiselect(label, options, default=saved, **kwargs)
+    st.session_state[memory_key] = value
+    return value

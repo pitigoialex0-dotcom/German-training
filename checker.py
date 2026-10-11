@@ -44,11 +44,11 @@ def split_variants(correct):
     """Если правильных ответов несколько ('идти/ходить'), возвращает список ['идти', 'ходить'].
 
     Пояснение в скобках необязательно: для 'билет (на транспорт)' подойдёт и просто 'билет'.
+    Запятые и / внутри скобок вариант не разделяют: 'ездить (на машине, поезде)' — один вариант.
     """
-    for separator in [",", ";"]:
-        correct = correct.replace(separator, "/")
     variants = []
-    for part in correct.split("/"):
+    # [/,;] — разделитель; (?![^()]*\)) — «но только если мы сейчас не внутри скобок»
+    for part in re.split(r"[/,;](?![^()]*\))", correct):
         part = part.strip()
         if part == "":
             continue
@@ -88,8 +88,25 @@ def allowed_typos(word):
     return 2
 
 
-def check_answer(user_answer, correct):
-    """Сравнивает ответ с правильным вариантом (или с одним из вариантов через '/')."""
+# Приставки отрицания: «правильно» ↔ «неправильно», «bequem» ↔ «unbequem».
+# Разница всего в 2 буквы, но смысл противоположный — это не опечатка.
+NEGATIONS = ["не", "un"]
+
+
+def is_negation_pair(a, b):
+    """True, если одно слово — это другое с приставкой отрицания."""
+    for prefix in NEGATIONS:
+        if a == prefix + b or b == prefix + a:
+            return True
+    return False
+
+
+def check_answer(user_answer, correct, others=None):
+    """Сравнивает ответ с правильным вариантом (или с одним из вариантов через '/').
+
+    others — множество ответов ДРУГИХ слов словаря. Если ты написал другое слово
+    («вечер» вместо «ветер»), это ошибка, даже если отличие всего в одну букву.
+    """
     user = normalize(user_answer)
     if user == "":
         return {"status": "wrong", "hint": "Пустой ответ — считаем как «не знаю»."}
@@ -106,20 +123,27 @@ def check_answer(user_answer, correct):
         if user == normalize(variant):
             return {"status": "correct", "hint": f"Правильно. Точное написание: {variant}"}
 
-    # 3. Мелкая опечатка
+    # 3. Это другое слово из словаря — значит, не опечатка
+    if others is not None and user in others:
+        return {"status": "wrong", "hint": "Это другое слово из словаря."}
+
+    # 4. Мелкая опечатка (но не отрицание: «неправильно» ≠ «правильно»)
     for variant in variants:
         clean_variant = normalize(variant)
+        if is_negation_pair(user, clean_variant):
+            continue
         if count_typos(user, clean_variant) <= allowed_typos(clean_variant):
             return {"status": "typo", "hint": f"Засчитано, но с опечаткой. Правильно: {variant}"}
 
     return {"status": "wrong", "hint": ""}
 
 
-def check_german(user_answer, word):
-    """Проверка ответа «русский → немецкий». У существительных нужен артикль: 'der Arzt'."""
-    if word["article"] == "":
-        return check_answer(user_answer, word["german"])
+def check_german(user_answer, word, others=None, synonyms=None):
+    """Проверка ответа «русский → немецкий». У существительных нужен артикль: 'der Arzt'.
 
+    synonyms — немецкие слова с тем же русским переводом. Например, на «температура»
+    подходят и die Temperatur, и das Fieber: такой ответ засчитываем с подсказкой.
+    """
     # Отделяем артикль от слова: 'der Arzt' → 'der' и 'Arzt'
     parts = user_answer.strip().split(maxsplit=1)
     if len(parts) == 2 and parts[0].lower() in ARTICLES:
@@ -129,7 +153,14 @@ def check_german(user_answer, word):
         user_article = ""
         user_word = user_answer
 
-    result = check_answer(user_word, word["german"])
+    if synonyms is not None and normalize(user_word) in synonyms \
+            and normalize(user_word) != normalize(word["german"]):
+        return {"status": "correct", "hint": f"Тоже подходит по переводу, но здесь имелось в виду: {word['key']}"}
+
+    if word["article"] == "":
+        return check_answer(user_answer, word["german"], others)
+
+    result = check_answer(user_word, word["german"], others)
 
     if result["status"] != "wrong" and user_article != word["article"]:
         if user_article == "":
@@ -138,6 +169,35 @@ def check_german(user_answer, word):
             text = f"Слово верно, но артикль не «{user_article}»."
         return {"status": "wrong_article", "hint": f"{text} Правильно: {word['key']}"}
 
+    return result
+
+
+def other_answers(words, word, field):
+    """Ответы всех ДРУГИХ слов словаря (field: "russian" или "german"), в упрощённом виде.
+    Нужны, чтобы отличать опечатку от другого слова."""
+    own = set()
+    for variant in split_variants(word[field]):
+        own.add(normalize(variant))
+    result = set()
+    for other in words:
+        if other["key"] == word["key"]:
+            continue
+        for variant in split_variants(other[field]):
+            if normalize(variant) not in own:
+                result.add(normalize(variant))
+    return result
+
+
+def synonym_answers(words, word):
+    """Немецкие слова, у которых есть общий русский перевод с этим словом."""
+    mine = set(normalize(v) for v in split_variants(word["russian"]))
+    result = set()
+    for other in words:
+        if other["key"] == word["key"]:
+            continue
+        theirs = set(normalize(v) for v in split_variants(other["russian"]))
+        if mine & theirs:   # & — пересечение множеств: общие элементы
+            result.add(normalize(other["german"]))
     return result
 
 
@@ -180,23 +240,54 @@ def check_perfekt(user_answer, word):
     return {"status": "wrong", "hint": f"Правильно: {correct}"}
 
 
+ONES = ["null", "eins", "zwei", "drei", "vier", "fünf", "sechs", "sieben", "acht", "neun", "zehn",
+        "elf", "zwölf", "dreizehn", "vierzehn", "fünfzehn", "sechzehn", "siebzehn", "achtzehn", "neunzehn"]
+TENS = {2: "zwanzig", 3: "dreißig", 4: "vierzig", 5: "fünfzig",
+        6: "sechzig", 7: "siebzig", 8: "achtzig", 9: "neunzig"}
+
+
+def number_word(n):
+    """Число словами по-немецки (0–999): 9 → 'neun', 25 → 'fünfundzwanzig', 120 → 'hundertzwanzig'."""
+    if n < 20:
+        return ONES[n]
+    if n < 100:
+        tens, ones = divmod(n, 10)   # divmod(25, 10) → (2, 5)
+        if ones == 0:
+            return TENS[tens]
+        one = "ein" if ones == 1 else ONES[ones]
+        return one + "und" + TENS[tens]
+    if n < 1000:
+        hundreds, rest = divmod(n, 100)
+        head = "hundert" if hundreds == 1 else ONES[hundreds] + "hundert"
+        return head + (number_word(rest) if rest else "")
+    return str(n)
+
+
 def sentence_words(text):
-    """Разбивает предложение на слова без знаков препинания: 'Ich bin müde.' → ['ich', 'bin', 'muede']."""
+    """Разбивает предложение на слова без знаков препинания: 'Ich bin müde.' → ['ich', 'bin', 'muede'].
+    Числа превращаются в слова, чтобы '9' и 'neun' считались одинаковыми."""
     for mark in ".,!?;:\"„“«»()–—":
         text = text.replace(mark, " ")
-    return normalize(text).split()
+    result = []
+    for token in normalize(text).split():
+        if token.isdigit() and len(token) <= 3:
+            token = normalize(number_word(int(token)))
+        result.append(token)
+    return result
 
 
 def check_sentence(user_answer, correct):
-    """Проверка диктанта: сравниваем предложения целиком, прощая знаки препинания и опечатки.
-    На каждые 12 букв прощаем одну опечатку."""
-    user = " ".join(sentence_words(user_answer))
-    target = " ".join(sentence_words(correct))
-    if user == "":
+    """Проверка диктанта по словам: каждое слово должно быть на месте (мелкие опечатки
+    в длинных словах прощаются), лишних и пропущенных слов быть не должно.
+    Числа можно писать цифрами или словами."""
+    user_words = sentence_words(user_answer)
+    target_words = sentence_words(correct)
+    if not user_words:
         return {"status": "wrong", "hint": "Пустой ответ — считаем как «не расслышал»."}
-    if user == target:
+    if user_words == target_words:
         return {"status": "correct", "hint": ""}
-    if count_typos(user, target) <= max(1, len(target) // 12):
+    all_found = all(ok for _, ok in sentence_diff(user_answer, correct))
+    if all_found and len(user_words) == len(target_words):
         return {"status": "typo", "hint": "Почти идеально — посмотри на подсвеченные слова."}
     return {"status": "wrong", "hint": ""}
 
@@ -210,16 +301,16 @@ def sentence_diff(user_answer, correct):
     user_words = sentence_words(user_answer)
     result = []
     for original in correct.split():
-        clean = sentence_words(original)
-        if len(clean) == 0:
-            result.append((original, True))  # отдельный знак препинания, например «–»
-            continue
-        found = None
-        for user_word in user_words:
-            if count_typos(user_word, clean[0]) <= allowed_typos(clean[0]):
-                found = user_word
-                break
-        if found is not None:
-            user_words.remove(found)  # каждое слово ответа засчитываем только один раз
-        result.append((original, found is not None))
+        all_ok = True
+        for clean in sentence_words(original):   # обычно одно слово, но '14:30' → два
+            found = None
+            for user_word in user_words:
+                if count_typos(user_word, clean) <= allowed_typos(clean):
+                    found = user_word
+                    break
+            if found is None:
+                all_ok = False
+            else:
+                user_words.remove(found)  # каждое слово ответа засчитываем только один раз
+        result.append((original, all_ok))
     return result

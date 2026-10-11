@@ -92,8 +92,9 @@ def load_words(path):
     first_line = text.split("\n")[0]
     reader = csv.DictReader(io.StringIO(text), delimiter=detect_delimiter(first_line))
 
-    # Проверяем, что в заголовке есть все нужные столбцы
-    header = reader.fieldnames or []
+    # Проверяем, что в заголовке есть все нужные столбцы (пробелы вокруг названий не важны)
+    reader.fieldnames = [name.strip() for name in (reader.fieldnames or [])]
+    header = reader.fieldnames
     missing = [column for column in COLUMNS if column not in header]
     if missing:
         warnings.append(
@@ -172,7 +173,8 @@ def filter_by_topics(words, topics):
     """Оставляет только слова выбранных тем. Если ничего не выбрано — все слова."""
     if not topics:
         return words
-    return [word for word in words if word["thema"] in topics]
+    # Пустая тема на экране называется «Meine Wörter» (см. themen.MY_WORDS)
+    return [word for word in words if (word["thema"] or "Meine Wörter") in topics]
 
 
 def is_verb_with_perfekt(word):
@@ -182,26 +184,33 @@ def is_verb_with_perfekt(word):
 
 def add_word(path, word):
     """Дописывает новое слово в конец CSV-файла (тем же разделителем, что уже в файле)."""
-    if not os.path.exists(path):
-        # Файла нет — создаём его с заголовком
+    if not os.path.exists(path) or read_text(path).strip() == "":
+        # Файла нет или он пустой — создаём его с заголовком
         with open(path, "w", encoding="utf-8", newline="") as f:
             csv.writer(f).writerow(ALL_COLUMNS)
 
     text = read_text(path)
     delimiter = detect_delimiter(text.split("\n")[0])
-    rows = list(csv.DictReader(io.StringIO(text), delimiter=delimiter))
-    header = next(csv.reader(io.StringIO(text), delimiter=delimiter))
-    header = [column.strip() for column in header]
+    reader = csv.DictReader(io.StringIO(text), delimiter=delimiter)
+    header = [name.strip() for name in reader.fieldnames]
+    reader.fieldnames = header
 
     # В старом файле может не быть новых столбцов (thema, perfekt) — добавляем их,
     # переписав файл целиком, иначе новые данные потерялись бы
     missing = [column for column in ALL_COLUMNS if column not in header]
     if missing:
+        rows = list(reader)
+        for row in rows:
+            if None in row:
+                # В строке больше ячеек, чем в заголовке: переписав файл, мы бы их потеряли
+                raise ValueError("В words.csv есть строка с лишними ячейками — исправь её и попробуй снова.")
         header = header + missing
-        with open(path, "w", encoding="utf-8", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=header, delimiter=delimiter, extrasaction="ignore")
+        temp_path = path + ".tmp"
+        with open(temp_path, "w", encoding="utf-8", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=header, delimiter=delimiter)
             writer.writeheader()
             writer.writerows(rows)
+        os.replace(temp_path, path)
         text = read_text(path)
 
     with open(path, "a", encoding="utf-8", newline="") as f:

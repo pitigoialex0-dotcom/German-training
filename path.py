@@ -30,10 +30,13 @@ def build_path(words):
         topic_words = themen.words_of_topic(words, thema)
         stations = []
 
-        # Слова порциями по WORDS_PER_STATION: range(0, 22, 7) → 0, 7, 14, 21
-        for number, start in enumerate(range(0, len(topic_words), WORDS_PER_STATION), start=1):
-            chunk = topic_words[start:start + WORDS_PER_STATION]
+        # Слова ровными порциями примерно по WORDS_PER_STATION: 22 слова → 8 + 7 + 7,
+        # а не 7 + 7 + 7 + 1 (станция из одного слова проваливается одной ошибкой)
+        start = 0
+        for number, size in enumerate(chunk_sizes(len(topic_words)), start=1):
+            chunk = topic_words[start:start + size]
             stations.append(make_station(thema, "words", f"Слова {number}", chunk, number))
+            start += size
 
         nouns = [word for word in topic_words if vocab.is_noun(word)]
         if len(nouns) >= 3:
@@ -46,6 +49,15 @@ def build_path(words):
         stations.append(make_station(thema, "checkpoint", "Чекпоинт", topic_words))
         units.append({"thema": thema, "info": themen.info(thema), "stations": stations})
     return units
+
+
+def chunk_sizes(total):
+    """Размеры порций: 22 → [8, 7, 7], 23 → [8, 8, 7], 12 → [6, 6], 5 → [5]."""
+    if total == 0:
+        return []
+    count = max(1, round(total / WORDS_PER_STATION))   # сколько станций нужно
+    base, extra = divmod(total, count)   # divmod(22, 3) → (7, 1)
+    return [base + 1] * extra + [base] * (count - extra)
 
 
 def make_station(thema, kind, title, words, number=None):
@@ -63,8 +75,19 @@ def make_station(thema, kind, title, words, number=None):
     }
 
 
+def has_untrained_words(station, progress_data):
+    """Есть ли в станции слова, которые ты ещё ни разу не тренировал
+    (например, ты добавил новое слово в уже пройденную тему)."""
+    for key in station["keys"]:
+        if key + "|ru_de" not in progress_data["cards"] and key + "|de_ru" not in progress_data["cards"]:
+            return True
+    return False
+
+
 def is_done(station, progress_data):
     """Пройдена ли станция."""
+    if station["kind"] == "words" and has_untrained_words(station, progress_data):
+        return False
     best = progress_data["stations"].get(station["id"], {}).get("best", 0)
     if station["kind"] == "checkpoint":
         return best >= CHECKPOINT_PASS

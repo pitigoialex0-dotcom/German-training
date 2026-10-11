@@ -34,6 +34,7 @@ TIPS = {
 
 def render(words, progress_data):
     current = st.session_state["lesson"]
+    st.session_state["all_words"] = words   # нужен проверке ответов (см. submit)
     by_key = {word["key"]: word for word in words}
     color = current["color"]
 
@@ -157,8 +158,9 @@ def show_task(current, task, word, color, progress_data):
         label = "По-немецки"
         placeholder = "например: der Tisch"
     elif kind == "perfekt":
+        blanks = "___ sich ___" if word["german"].startswith("sich ") else "___ ___"
         question_card(title, ui.esc(word["german"]),
-                      f'{ui.esc(word["russian"])}<br>er / sie / es <b>___ ___</b><br>{chips}', color)
+                      f'{ui.esc(word["russian"])}<br>er / sie / es <b>{blanks}</b><br>{chips}', color)
         label = "Perfekt (вспомогательный глагол + Partizip II)"
         placeholder = "например: hat gemacht / ist gefahren"
     else:  # diktat
@@ -173,10 +175,14 @@ def show_task(current, task, word, color, progress_data):
     ui.focus('[data-testid="stForm"] input', nonce)
 
     if submitted:
+        all_words = st.session_state["all_words"]
         if kind == "de_ru":
-            result = checker.check_answer(answer_text, word["russian"])
+            others = checker.other_answers(all_words, word, "russian")
+            result = checker.check_answer(answer_text, word["russian"], others)
         elif kind == "ru_de":
-            result = checker.check_german(answer_text, word)
+            others = checker.other_answers(all_words, word, "german")
+            synonyms = checker.synonym_answers(all_words, word)
+            result = checker.check_german(answer_text, word, others, synonyms)
         elif kind == "perfekt":
             result = checker.check_perfekt(answer_text, word)
         else:
@@ -192,8 +198,8 @@ def submit(current, task, word, result, answer_text, progress_data):
         article_mistake = result["status"] == "wrong_article" or (kind == "article" and not ok)
         progress.record_answer(progress_data, word, kind, ok, article_mistake)
 
-    result["task"] = dict(task)        # копия задания: в очереди оно может измениться
     xp = lesson.answer(current, ok)
+    result["task"] = dict(task)        # копия задания (уже с новым числом попыток)
     if xp:
         progress.add_xp(progress_data, xp)
     if current["finished"]:
@@ -248,7 +254,7 @@ def show_result(current, by_key, progress_data):
             body += f"<br>Твой ответ: {ui.esc(result['answer'])}"
         if result["hint"]:
             body += f"<br>{ui.esc(result['hint'])}"
-        if len(current["queue"]) > 0 and task["tries"] < lesson.MAX_TRIES:
+        if task["tries"] < lesson.MAX_TRIES and not current["finished"]:
             body += "<br>🔁 Это задание вернётся в конце урока."
         ui.show(ui.result_banner(False, "Fast! Почти 🙈", body))
 
@@ -290,7 +296,7 @@ def show_finish(current, by_key, words, progress_data):
     stars = current.get("stars", 0)
     if stars == 3:
         trophy, title = "🏆", "Идеально! Ни одной ошибки!"
-    elif stars >= 1:
+    elif current.get("passed"):
         trophy, title = "🎉", "Урок пройден!"
     else:
         trophy, title = "💪", "Хорошая тренировка — попробуй ещё раз"
@@ -298,8 +304,7 @@ def show_finish(current, by_key, words, progress_data):
     station_note = ""
     if current["station"] is not None:
         need = "80%" if current["station"].endswith("checkpoint") else "60%"
-        if (current["station"].endswith("checkpoint") and accuracy >= 0.8) or \
-                (not current["station"].endswith("checkpoint") and stars >= 1):
+        if current.get("passed"):
             station_note = ui.result_banner(True, "Станция пройдена! 🗺️", "Следующая станция на пути открыта.")
         else:
             station_note = ui.result_banner(False, "Станция пока не пройдена",
