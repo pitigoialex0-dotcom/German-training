@@ -221,6 +221,9 @@ def sprechen_tab(content, progress_data):
                     st.session_state["sprechen1"] = random.randrange(len(cards))
                     st.rerun()
             with right:
+                ui.show('<div class="card"><div class="muted">💡 Как это работает на экзамене</div>'
+                        'У тебя 4 карточки со словами. По каждой задаёшь партнёру вопрос, он отвечает, '
+                        'потом наоборот. Пример: <b>Wohnort?</b> → «Wo wohnst du?» — «Ich wohne in Chișinău.»</div>')
                 # Ключ зависит от номера карточки: у новой карточки образец снова скрыт
                 if st.toggle("👀 Показать образец", key=f'sprechen1-show-{st.session_state["sprechen1"]}'):
                     ui.show(f'<div class="word-info"><div><b>Frage:</b> {ui.esc(card["frage"])}</div>'

@@ -158,3 +158,12 @@ def test_add_word(tmp_path):
 def test_lessons_sorted_as_numbers():
     words = [{"lektion": "13"}, {"lektion": "2"}, {"lektion": "13"}]
     assert vocab.get_lessons(words) == ["2", "13"]
+
+
+def test_style_css_has_no_html_tags():
+    # Streamlit чистит HTML через DOMPurify: если в CSS встретится что-то вроде <p>,
+    # весь блок стилей будет выброшен и приложение станет серым
+    import re
+    path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "style.css")
+    with open(path, encoding="utf-8") as f:
+        assert re.findall(r"<[/\w]", f.read()) == []

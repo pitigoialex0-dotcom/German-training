@@ -207,7 +207,7 @@ div[class*="st-key-node-locked"] button {
   filter: grayscale(1);
   opacity: .75;
 }
-/* Текст внутри кнопок лежит в <p> со своим размером — задаём его явно */
+/* Текст внутри кнопок лежит в отдельном абзаце p со своим размером — задаём его явно */
 div[class*="st-key-node-"] button p { font-size: 2rem !important; line-height: 1 !important; }
 div[class*="st-key-art-"] button p { font-size: 1.9rem !important; font-weight: 900 !important; }
 div[class*="st-key-opt-"] button p { font-size: 1.2rem !important; font-weight: 800 !important; }
