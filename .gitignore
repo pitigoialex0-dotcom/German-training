@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+.venv/
+venv/
+progress.json
+progress.json.tmp
+progress.json.broken
