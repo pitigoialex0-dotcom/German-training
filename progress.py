@@ -27,7 +27,8 @@ import os
 import random
 from datetime import date, timedelta
 
-PROGRESS_FILE = "progress.json"
+# Файл прогресса лежит рядом с этим файлом кода, откуда бы ни запускали программу
+PROGRESS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "progress.json")
 
 # Через сколько дней повторять слово из каждой коробки
 INTERVALS = {1: 0, 2: 1, 3: 3, 4: 7, 5: 21}
